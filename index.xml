@@ -14,14 +14,14 @@
       <link>https://cryogas.github.io/content/wani-ctf/</link>
       <pubDate>Mon, 24 Jun 2024 23:15:36 +0800</pubDate>
       <guid>https://cryogas.github.io/content/wani-ctf/</guid>
-      <description>This is my writeup for Wani CTF&#xA;Forensics Surveillance of sus A binary file is given, and after some investigation, it has a RDP8BMP Header.&#xA;To get the BMP images, I have referred to this article and use a Python Script (bmc-tools).&#xA;After all the bmp files are recovered, the flag can be readed in plain sight if the view is changed to &amp;ldquo;Large icons&amp;rdquo;.&#xA;Flag : FLAG{RDP_is_useful_yipeee}&#xA;Tiny USB A disk image file is given.</description>
+      <description>This is my writeup for Wani CTF, an event organized by Osaka University CTF Club, Wani Hackase (Rank 304th)&#xA;Forensics Surveillance of sus A binary file is given, and after some investigation, it has a RDP8BMP Header.&#xA;To get the BMP images, I have referred to this article and use a Python Script (bmc-tools).&#xA;After all the bmp files are recovered, the flag can be readed in plain sight if the view is changed to &amp;ldquo;Large icons&amp;rdquo;.</description>
     </item>
     <item>
       <title>VSCTF Awa-Jelly Writeup</title>
       <link>https://cryogas.github.io/content/vsctf/</link>
       <pubDate>Thu, 20 Jun 2024 11:32:57 +0800</pubDate>
       <guid>https://cryogas.github.io/content/vsctf/</guid>
-      <description>For this CTF, I only solved one question by myself, so here is the writeup for awa-jelly (reverse engineering)&#xA;Hello&#xA;Basically, the challenge is to recover the redacted input text so that the output is same as displayed.&#xA;Although I know Python a little, I decided to use the traditional method: Excel 🤦🏻&#xA;Throughout my process, I tried to recover the scrambling algorithm by using Python, and I discovered some characters cannot be displayed after scrambling, which caused my natural approach to be weird due to some characters are missing.</description>
+      <description>For this CTF, I only solved one question by myself, so here is the writeup for awa-jelly (reverse engineering)&#xA;Basically, the challenge is to recover the redacted input text so that the output is same as displayed.&#xA;Although I know Python a little, I decided to use the traditional method: Excel 🤦🏻&#xA;Throughout my process, I tried to recover the scrambling algorithm by using Python, and I discovered some characters cannot be displayed after scrambling, which caused my natural approach to be weird due to some characters are missing.</description>
     </item>
   </channel>
 </rss>

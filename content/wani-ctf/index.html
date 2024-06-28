@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html><head lang="en">
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Wani Ctf 2024 Writeup - H9</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="/content/Enchanted_Book.gif">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>H9 | Wani Ctf 2024 Writeup</title><meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Writeup for Wani-CTF 2024" />
 	<meta property="og:image" content=""/>
 	<meta property="og:url" content="https://cryogas.github.io/content/wani-ctf/">
@@ -62,11 +63,12 @@
 		
 
 		<section class="body">
-			<p>This is my writeup for Wani CTF</p>
+			<p>This is my writeup for Wani CTF, an event organized by Osaka University CTF Club, Wani Hackase (Rank 304th)</p>
 <h1 id="forensics">Forensics</h1>
 <h3 id="surveillance-of-sus">Surveillance of sus</h3>
 <p>A binary file is given, and after some investigation, it has a RDP8BMP Header.</p>
 <p><img src="/content/wani/hex.png" alt="Image"></p>
+<!-- raw HTML omitted -->
 <p>To get the BMP images, I have referred to this <a href="https://medium.com/@yashkumarnavadiya/htb-no-place-to-hide-easy-forensics-challenge-b025c864607a">article</a> and use a Python Script (bmc-tools).</p>
 <p>After all the bmp files are recovered, the flag can be readed in plain sight if the view is changed to &ldquo;Large icons&rdquo;.</p>
 <p><img src="/content/wani/large-icon.png" alt="Image"></p>
@@ -82,13 +84,15 @@
 <p>A small image is given.</p>
 <p><img src="/content/wani/chal_tiny_10px.jpg" alt="Image"></p>
 <p>Based on my instincts, this could be one of those image steganography where the author resized the image of a large image.</p>
-<p>So I followed the instructions of this [article]https://cyberhacktics.com/hiding-information-by-changing-an-images-height/) to recover the image by changing the hex values of height and width (multiple times).</p>
+<p>So I followed the instructions of this <a href="https://cyberhacktics.com/hiding-information-by-changing-an-images-height/">article</a> to recover the image by changing the hex values of height and width (multiple times).</p>
 <p><img src="/content/wani/hex-small.png" alt="Image"></p>
 <p>After some effort, a message is visible from the image. (although reading it may take some time).</p>
 <p><img src="/content/wani/new.jpg" alt="Image"></p>
 <p>Flag: FLAG{b1g_en0ugh}</p>
 <hr>
 <h1 id="conclusion">Conclusion</h1>
+<p>This is my 6th CTF event participation, and I am happy that I can solve some easy to medium level challenges now!</p>
+<p>Thank you for reading.</p>
 
 		</section>
 
