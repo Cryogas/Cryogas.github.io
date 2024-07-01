@@ -7,8 +7,15 @@
     <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>© H9</copyright>
-    <lastBuildDate>Mon, 24 Jun 2024 23:15:36 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 01 Jul 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://cryogas.github.io/content/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>UIUCTF 2024 Writeup</title>
+      <link>https://cryogas.github.io/content/uiuctf24/</link>
+      <pubDate>Mon, 01 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>https://cryogas.github.io/content/uiuctf24/</guid>
+      <description>💡 UIUCTF2024, hosted by SIGPwny, the cybersecurity club at the University of Illinois Urbana-Champaign (UIUC)&#xD;For this CTF competition, I am only able to do some OSINT challenges, so here is my writeup for UIUCTF2024!&#xA;OSINT Hip With the Youth This challenge requires players to find the flag on the social media of Long Island Subway Authority (LISA).&#xA;From the Instagram account, there are no flags visible.&#xA;Lisa&amp;#39;s Instagram Account After looking through the posts and followers list, nothing useful is found.</description>
+    </item>
     <item>
       <title>Wani Ctf 2024 Writeup</title>
       <link>https://cryogas.github.io/content/wani-ctf/</link>
