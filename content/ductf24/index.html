@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html><head lang="en">
+	<meta charset="utf-8" />
+	<link rel="icon" href="/content/Enchanted_Book.gif">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>H9 | DownUnderCTF24 Writeup</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="💡 DownUnderCTF, the Largest CTF in the Southern Hemisphere!The challenges in this CTF are hard! But I managed to solve some of the easier challenges, so here is my writeup for DownUnderCTF!
+MISC Discord The challenge requires us to get the flag in Discord server.
+To do this, we just search for &ldquo;DUCTF&rdquo; in the Discord chat.
+Found Part 1 Looking around for some time, but could&rsquo;nt find the second part." />
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content="https://cryogas.github.io/content/ductf24/">
+  <meta property="og:site_name" content="H9">
+  <meta property="og:title" content="DownUnderCTF24 Writeup">
+  <meta property="og:description" content="💡 DownUnderCTF, the Largest CTF in the Southern Hemisphere!The challenges in this CTF are hard! But I managed to solve some of the easier challenges, so here is my writeup for DownUnderCTF!
+MISC Discord The challenge requires us to get the flag in Discord server.
+To do this, we just search for “DUCTF” in the Discord chat.
+Found Part 1 Looking around for some time, but could’nt find the second part.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="content">
+    <meta property="article:published_time" content="2024-07-07T09:13:25+08:00">
+    <meta property="article:modified_time" content="2024-07-07T09:13:25+08:00">
+    <meta property="article:tag" content="CTF">
+    <meta property="article:tag" content="Cybersecurity">
+    <meta property="article:tag" content="Writeup">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="DownUnderCTF24 Writeup">
+  <meta name="twitter:description" content="💡 DownUnderCTF, the Largest CTF in the Southern Hemisphere!The challenges in this CTF are hard! But I managed to solve some of the easier challenges, so here is my writeup for DownUnderCTF!
+MISC Discord The challenge requires us to get the flag in Discord server.
+To do this, we just search for “DUCTF” in the Discord chat.
+Found Part 1 Looking around for some time, but could’nt find the second part.">
+
+	
+        <link href="https://cryogas.github.io/css/fonts.11a1877508139eac0b5b4852ceb110c35641b3533321e66e39149e901ed5756b.css" rel="stylesheet">
+	
+
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="https://cryogas.github.io/css/main.cc62ec58dd3b5dc0d5a2b580e087443fa50a176518960364c68b625c34fdf8fc.css" />
+		<link id="darkModeStyle" rel="stylesheet" type="text/css" href="https://cryogas.github.io/css/dark.2ff528b39ad35a515e2e7b1ae468297d03c4a2e8be01120714c80c8ad397860a.css"   />
+	
+
+	
+	
+
+	
+	
+	
+	
+</head>
+<body>
+        <div class="content"><header>
+	<div class="main">
+		<div class="mainpageLogo">
+			<img src="/content/Enchanted_Book.gif" alt="">
+		</div>
+		<div class = "headerTitle">
+			<a href="https://cryogas.github.io/">H9</a>
+		</div>
+	</div>
+	<nav>
+		
+		<a class = "header-nav" href="/content">All posts</a>
+		
+		<a class = "header-nav" href="/about">About</a>
+		
+		<a class = "header-nav" href="/tags">Tags</a>
+		
+		
+	</nav>
+</header>
+
+<main>
+	<article>
+		<div class="title">
+			<h1 class="title">DownUnderCTF24 Writeup</h1>
+			<div class="meta">Posted on Jul 7, 2024</div>
+		</div>
+		
+
+		<section class="body">
+			<br>
+			<br>
+			<div class = "toc">
+				<h1>
+					Table Of Contents
+				</h1>
+				<nav id="TableOfContents">
+  <ul>
+    <li><a href="#misc">MISC</a>
+      <ul>
+        <li><a href="#discord">Discord</a></li>
+        <li><a href="#tldr-please-summarize">tldr please summarize</a></li>
+      </ul>
+    </li>
+    <li><a href="#crypto">Crypto</a>
+      <ul>
+        <li><a href="#sun-zis-perfect-math-class">Sun Zi&rsquo;s Perfect Math Class</a></li>
+        <li><a href="#shufflebox">shufflebox</a></li>
+      </ul>
+    </li>
+    <li><a href="#osint">OSINT</a>
+      <ul>
+        <li><a href="#offtheramp">offtheramp</a></li>
+        <li><a href="#cityviews">cityviews</a></li>
+        <li><a href="#bridget-lives">Bridget Lives</a></li>
+        <li><a href="#back-to-the-jungle">back to the jungle</a></li>
+        <li><a href="#theyre-making-decoys">They&rsquo;re Making Decoys</a></li>
+        <li><a href="#marketing">marketing</a></li>
+        <li><a href="#perfect-clear-for-osint-challenges">Perfect clear for OSINT challenges!</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+			</div>
+			<br>
+			<br>
+			
+<div class="callout" style="">
+	<div class="callout-inner">
+    💡 DownUnderCTF, the Largest CTF in the Southern Hemisphere!
+  </div>
+</div>
+<p>The challenges in this CTF are hard! But I managed to solve some of the easier challenges, so here is my writeup for DownUnderCTF!</p>
+<h1 id="misc">MISC</h1>
+<h2 id="discord">Discord</h2>
+<p>The challenge requires us to get the flag in Discord server.</p>
+<p>To do this, we just search for &ldquo;DUCTF&rdquo; in the Discord chat.</p>
+<figure><img src="/content/ductf24/content/ductf24/discord1.png"><figcaption>
+      <h4>Found Part 1</h4>
+    </figcaption>
+</figure>
+
+<p>Looking around for some time, but could&rsquo;nt find the second part..</p>
+<p>Wait a minute, might be sent by the same guy..
+<figure><img src="/content/ductf24/content/ductf24/discord2.png"><figcaption>
+      <h4>Gotcha!</h4>
+    </figcaption>
+</figure>
+</p>
+<p>FLAG: DUCTF{f1r57_0f_m4ny}</p>
+<hr>
+<h2 id="tldr-please-summarize">tldr please summarize</h2>
+<p>A docx file is attached, might be hiding some kind of secret message.</p>
+<figure><img src="/content/ductf24/content/ductf24/tldr1.png"><figcaption>
+      <h4>Test</h4>
+    </figcaption>
+</figure>
+
+<figure><img src="/content/ductf24/content/ductf24/tldr2.png"><figcaption>
+      <h4>Some of the content in the docx file</h4>
+    </figcaption>
+</figure>
+
+<p>The passage is so long, so I did not bother to read.</p>
+<p>As I scroll through the document, something caught my attention. Abnormal tiny wavy lines at the bottom.</p>
+<figure><img src="/content/ductf24/content/ductf24/tldr3.png"><figcaption>
+      <h4>Sus...</h4>
+    </figcaption>
+</figure>
+
+<p>I selected all and changed the font color, which reveals the actual hidden text.
+<figure><img src="/content/ductf24/content/ductf24/tldr4.png">
+</figure>
+</p>
+<p>Looks like a shell script. After executing the script in Kali Terminal, the flag is found!</p>
+<figure><img src="/content/ductf24/content/ductf24/tldr5.png"><figcaption>
+      <h4>Open /temp.sh </h4>
+    </figcaption>
+</figure>
+
+<p>FLAG: DUCTF{chatgpt_I_n33d_2_3scap3}</p>
+<hr>
+<h1 id="crypto">Crypto</h1>
+<h2 id="sun-zis-perfect-math-class">Sun Zi&rsquo;s Perfect Math Class</h2>
+<p>A webpage link is embedded, which brings us to a webpage to solve a math question.</p>
+<figure><img src="/content/ductf24/content/ductf24/sz1.png">
+</figure>
+
+<figure><img src="/content/ductf24/content/ductf24/sz2.png"><figcaption>
+      <h4>The question</h4>
+    </figcaption>
+</figure>
+
+<p>Sun zi reminds me of Chinese Remainder Theorem I read the other day. I have put the solution below,
+<figure><img src="/content/ductf24/content/ductf24/sz3.png"><figcaption>
+      <h4>How I get the minimum value of n</h4>
+    </figcaption>
+</figure>
+</p>
+<p>The question states that the number of soldiers is between 1000 and 1100, in order to find n, we can keep adding (3 * 5 * 7) to 194, so that n fulfills the 3 modulo equations.</p>
+<p>We will get 194, 299 &hellip; 929, 1034, 1139,&hellip;.</p>
+<p>Therefore the answer is 1034 😊</p>
+<figure><img src="/content/ductf24/content/ductf24/sz4.png"><figcaption>
+      <h4>The answer is correct!</h4>
+    </figcaption>
+</figure>
+
+<p>Wait, there is a part 2&hellip;</p>
+<hr>
+<h2 id="shufflebox">shufflebox</h2>
+<p>For this challenge, a shuffled code is given to us to recover the message</p>
+<p><figure><img src="/content/ductf24/content/ductf24/shuffle.png"><figcaption>
+      <h4>The answer is correct!</h4>
+    </figcaption>
+</figure>
+
+I have done a challenge which looks like this before: <a href="https://cryogas.github.io/content/vsctf/">awa-jelly</a></p>
+<p>Therefore, I&rsquo;ll just find out the sequence and recover the flag.</p>
+<p>FLAG: DUCTF{udiditgjwowsuper}</p>
+<hr>
+<h1 id="osint">OSINT</h1>
+<h2 id="offtheramp">offtheramp</h2>
+<p>This is an easy challenge, but for some reason, I am stuck for at least 5 hours&hellip;  🤦🏻 (Please read till the end to see how I wasted 5 hours 👍)</p>
+<p>An image of a dock is given, requiring us to discover the name of the structure.</p>
+<p><figure><img src="/content/ductf24/content/ductf24/ramp1.png">
+</figure>
+
+<figure><img src="/content/ductf24/content/ductf24/offtheramp.jpeg">
+</figure>
+</p>
+<p>It all started when I saw hundreds of solves within the first few hours of the challenge&rsquo;s release&hellip;</p>
+<p>Should be an easy question, right?</p>
+<figure><img src="/content/ductf24/content/ductf24/nope.jpg"><figcaption>
+      <h4>(For me 🤡)</h4>
+    </figcaption>
+</figure>
+
+<p>First approach:</p>
+<p>Just look around the whole Australia for docks on Google Maps, because how hard can it be?</p>
+<p>Turns out it is very hard&hellip; and not very practical..</p>
+<p>Second approach:</p>
+<p>Google Lens</p>
+<p>It doesn&rsquo;t really return good results until I found the small image in this article:</p>
+<figure><img src="/content/ductf24/content/ductf24/frankston.png">
+</figure>
+
+<p>Frankston.. let me look around the area..</p>
+<p>After some searching around, I found the exact view from Google Maps.</p>
+<p><figure><img src="/content/ductf24/content/ductf24/ramp3.png">
+</figure>
+
+<figure><img src="/content/ductf24/content/ductf24/ramp4.png"><figcaption>
+      <h4>The exact same spot?</h4>
+    </figcaption>
+</figure>
+</p>
+<p>I entered State_Road_3 as the flag, but the answer is wrong.. damn</p>
+<p>I asked the mods for help, turns out I was at the right place all along, now I just need to find the name of the STRUCTURE.</p>
+<figure><img src="/content/ductf24/content/ductf24/rm.png">
+</figure>
+
+<figure><img src="/content/ductf24/content/ductf24/rm2.png"><figcaption>
+      <h4>The struggle is REAL</h4>
+    </figcaption>
+</figure>
+
+<p>After changing it back to street view, I finally found the &ldquo;structure&rdquo;&hellip;</p>
+<p><figure><img src="/content/ductf24/content/ductf24/ramp5.png">
+</figure>
+
+<figure><img src="/content/ductf24/content/ductf24/rm3.png"><figcaption>
+      <h4>FINALLY!</h4>
+    </figcaption>
+</figure>
+</p>
+<blockquote>
+<p>After reading the official writeup,<br>
+Turns out the exact coordinates of the location can be found using EXIF Tools..<br>
+GOD WHYY U DO THIS TO ME??</p>
+</blockquote>
+<figure><img src="/content/ductf24/content/ductf24/exif-ramp.png"><figcaption>
+      <h4>How to save 5 hours of life</h4>
+    </figcaption>
+</figure>
+
+<p><figure><img src="/content/ductf24/content/ductf24/why.jpg"><figcaption>
+      <h4>This is me after reading the writeup</h4>
+    </figcaption>
+</figure>
+
+<figure><img src="/content/ductf24/content/ductf24/raccoon.jpg"><figcaption>
+      <h4>I am a clueless rakun</h4>
+    </figcaption>
+</figure>
+</p>
+<blockquote>
+<p>Pondering life and the decisions that led you to this point. <br>
+-sir nosurf</p>
+<p>Now I understand what you meant by then 🤡</p>
+</blockquote>
+<p>FLAG: DUCTF{Oliver_Hill_Boat_Ramp}</p>
+<hr>
+<h2 id="cityviews">cityviews</h2>
+<p>An image is given to determine where the photo is taken.</p>
+<figure><img src="/content/ductf24/content/ductf24/cityviews.jpeg">
+</figure>
+
+<p>First thing I noticed is the brand logo that looks like a blue palm.</p>
+<p>By utilizing Google Images, I found a <a href="https://grimshaw.global/projects/workplace/699-bourke-street/">page</a> which resembles the logo, and the address is at 699 Bourke Street, and the logo is AGL&rsquo;s logo.
+<figure><img src="/content/ductf24/content/ductf24/city1.png">
+</figure>
+</p>
+<p>After fiddling around with Google Maps Satelite View, I managed to get an angle that resembles the image, with the advertisement screen and the old building.</p>
+<figure><img src="/content/ductf24/content/ductf24/city2.png">
+</figure>
+
+<p>Looking at the picture, there is this high-arch windows, which can be found on the street view of 575 Flinders Ln.
+<figure><img src="/content/ductf24/content/ductf24/city4.png"><figcaption>
+      <h4>Almost there!</h4>
+    </figcaption>
+</figure>
+</p>
+<p>I tried using Holiday Inn as the flag, but it was wrong.</p>
+<p>After a few guesses, I found the flag!</p>
+<figure><img src="/content/ductf24/content/ductf24/city6.png">
+</figure>
+
+<p>FLAG: DUCTF{Hotel_Indigo}</p>
+<hr>
+<h2 id="bridget-lives">Bridget Lives</h2>
+<p>An image was given for us to find where the photo is taken.</p>
+<figure><img src="/content/ductf24/content/ductf24/bridget.png">
+</figure>
+
+<p>By using Google Images, the most relevant result is Jiak Kim Bridge in Singapore, but after closely examining it, the bridge in the given image is completely different from the Jiak Kim Bridge.</p>
+<p>Just keep looking..</p>
+<p>Finally I found a result, which may be the solution!</p>
+<figure><img src="/content/ductf24/content/ductf24/bridge1.png">
+</figure>
+
+<p>After watching the video, I am now 100% sure this is the place!
+<figure><img src="/content/ductf24/content/ductf24/bridge2.png"><figcaption>
+      <h4>Robertson Bridge</h4>
+    </figcaption>
+</figure>
+
+So the flag is the building next to it, which is Four Points by Sheraton.</p>
+<figure><img src="/content/ductf24/content/ductf24/bridge3.png"><figcaption>
+      <h4>A better view</h4>
+    </figcaption>
+</figure>
+
+<p>FLAG: DUCTF{Four_Points}</p>
+<hr>
+<h2 id="back-to-the-jungle">back to the jungle</h2>
+<p>MC Fat Monke just dropped a new track???</p>
+<p>I googled online for this infamous artist, and here are the results.</p>
+<figure><img src="/content/ductf24/content/ductf24/back1.png">
+</figure>
+
+<p>The YouTube <a href="https://www.youtube.com/watch?v=jmhn3IMLQyM">Link</a> leads us to a sick mixtape.</p>
+<p>The key to the flag is at 2:34 of the video, where there is a <a href="https://average-primate-th.wixsite.com/mc-fat-monke-appreci">link</a> to another website.</p>
+<p><figure><img src="/content/ductf24/content/ductf24/back2.png">
+</figure>
+
+The flag is in plain sight after the page is loaded!</p>
+<figure><img src="/content/ductf24/content/ductf24/back3.png">
+</figure>
+
+<p>FLAG: DUCTF{wIr_G0iNg_b4K_t00_d3r_jUNgL3_mIt_d15_1!!111!}</p>
+<hr>
+<h2 id="theyre-making-decoys">They&rsquo;re Making Decoys</h2>
+<p>This is my favorite OSINT challenge because it is relatively hard.</p>
+<p>An image is given for us to find the coordinates of the location (rounded in 4 decimal places) of the &ldquo;fake&rdquo; emus.</p>
+<figure><img src="/content/ductf24/content/ductf24/decoys.png">
+</figure>
+
+<p>I have searched for some keywords such as &ldquo;fake emus&rdquo;, &ldquo;emu metal statue&rdquo; and &ldquo;emu metal&rdquo;, but it doesn&rsquo;t give me any significant results, until I found this post&hellip;
+<figure><img src="/content/ductf24/content/ductf24/emu.png">
+</figure>
+
+<figure><img src="/content/ductf24/content/ductf24/emu1.png"><figcaption>
+      <h4>Cool looking decorations</h4>
+    </figcaption>
+</figure>
+</p>
+<p>Looks like what we are looking for..</p>
+<p>The post says the sculptures are at East of Tailem Drive, therefore, I used Google Street View to search the area, till I found the exact spot!</p>
+<figure><img src="/content/ductf24/content/ductf24/emu2.png"><figcaption>
+      <h4>Found them!</h4>
+    </figcaption>
+</figure>
+
+<p>FLAG: DUCTF{-29.5506,153.2777}</p>
+<hr>
+<h2 id="marketing">marketing</h2>
+<figure><img src="/content/ductf24/content/ductf24/mkt1.png">
+</figure>
+
+<p>Google for MC Fat Monke again, this time we found a X (Twitter) Post under DownUnderCTF&rsquo;s account.</p>
+<p>The flag is actually here if you observe carefully&hellip;</p>
+<figure><img src="/content/ductf24/content/ductf24/mkt2.png">
+</figure>
+
+<p>Can&rsquo;t see it? Let me show you.
+<figure><img src="/content/ductf24/content/ductf24/mkt3.png"><figcaption>
+      <h4>Top left corner</h4>
+    </figcaption>
+</figure>
+</p>
+<p>FLAG: DUCTF{doing_a_bit_of_marketing}</p>
+<h2 id="perfect-clear-for-osint-challenges">Perfect clear for OSINT challenges!</h2>
+<figure><img src="/content/ductf24/content/ductf24/all.png"><figcaption>
+      <h4>🥳</h4>
+    </figcaption>
+</figure>
+
+
+		</section>
+
+		<div class="post-tags">
+			
+			
+			
+			<nav class="nav tags">
+				<ul class="tags">
+					
+					<li><a href="/tags/ctf">CTF</a></li>
+					
+					<li><a href="/tags/cybersecurity">Cybersecurity</a></li>
+					
+					<li><a href="/tags/writeup">Writeup</a></li>
+					
+				</ul>
+			</nav>
+			
+			
+		</div>
+		</article>
+</main>
+<footer>
+  <div style="display:flex"></div>
+  <div class="footer-info">
+    2024  © H9 |  <a
+      href="https://github.com/athul/archie"></a><a href="https://gohugo.io"></a>
+  </div>
+</footer>
+
+
+  
+
+
+</div>
+    </body>
+</html>

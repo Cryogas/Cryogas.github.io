@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cybersecurity on H9</title>
+    <link>https://cryogas.github.io/tags/cybersecurity/</link>
+    <description>Recent content in Cybersecurity on H9</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <copyright>© H9</copyright>
+    <lastBuildDate>Sun, 07 Jul 2024 09:13:25 +0800</lastBuildDate>
+    <atom:link href="https://cryogas.github.io/tags/cybersecurity/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DownUnderCTF24 Writeup</title>
+      <link>https://cryogas.github.io/content/ductf24/</link>
+      <pubDate>Sun, 07 Jul 2024 09:13:25 +0800</pubDate>
+      <guid>https://cryogas.github.io/content/ductf24/</guid>
+      <description>💡 DownUnderCTF, the Largest CTF in the Southern Hemisphere!&#xD;The challenges in this CTF are hard! But I managed to solve some of the easier challenges, so here is my writeup for DownUnderCTF!&#xA;MISC Discord The challenge requires us to get the flag in Discord server.&#xA;To do this, we just search for &amp;ldquo;DUCTF&amp;rdquo; in the Discord chat.&#xA;Found Part 1 Looking around for some time, but could&amp;rsquo;nt find the second part.</description>
+    </item>
+  </channel>
+</rss>

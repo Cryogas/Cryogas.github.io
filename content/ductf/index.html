@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html><head lang="en"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+	<meta charset="utf-8" />
+	<link rel="icon" href="/content/Enchanted_Book.gif">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>H9 | DownUnderCTF Writeup</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Writeup for DownUnder CTF" />
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content="http://localhost:1313/content/ductf/">
+  <meta property="og:site_name" content="H9">
+  <meta property="og:title" content="DownUnderCTF Writeup">
+  <meta property="og:description" content="Writeup for DownUnder CTF">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="content">
+    <meta property="article:published_time" content="2024-07-06T23:27:19+08:00">
+    <meta property="article:modified_time" content="2024-07-06T23:27:19+08:00">
+    <meta property="article:tag" content="Writeup">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="DownUnderCTF Writeup">
+  <meta name="twitter:description" content="Writeup for DownUnder CTF">
+
+	
+        <link href="http://localhost:1313/css/fonts.11a1877508139eac0b5b4852ceb110c35641b3533321e66e39149e901ed5756b.css" rel="stylesheet">
+	
+
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="http://localhost:1313/css/main.c4a14bd3a4854a77f3f7a5665f0362f228d755c6858f629fbe3ed9c2728fc71b.css" />
+		<link id="darkModeStyle" rel="stylesheet" type="text/css" href="http://localhost:1313/css/dark.af6afa549e328fa53666dad7a857e3a3fbcc0746b72f18158b1563fd2b59cabf.css"   />
+	
+
+	
+	
+
+	
+	
+	
+	
+</head>
+<body>
+        <div class="content"><header>
+	<div class="main">
+		<div class="mainpageLogo">
+			<img src="/content/Enchanted_Book.gif" alt="">
+		</div>
+		<div class = "headerTitle">
+			<a href="http://localhost:1313/">H9</a>
+		</div>
+	</div>
+	<nav>
+		
+		<a class = "header-nav" href="/content">All posts</a>
+		
+		<a class = "header-nav" href="/about">About</a>
+		
+		<a class = "header-nav" href="/tags">Tags</a>
+		
+		
+	</nav>
+</header>
+
+<main>
+	<article>
+		<div class="title">
+			<h1 class="title">DownUnderCTF Writeup</h1>
+			<div class="meta">Posted on Jul 6, 2024</div>
+		</div>
+		
+
+		<section class="body">
+			<br>
+			<br>
+			<div class = "toc">
+				<h1>
+					Table Of Contents
+				</h1>
+				<nav id="TableOfContents">
+  <ul>
+    <li><a href="#beginner">Beginner</a>
+      <ul>
+        <li><a href="#tldr-please-summarize">tldr please summarize</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+			</div>
+			<br>
+			<br>
+			<p>This CTF is hard! But I managed to solve some of the easier challenges, so here is my writeup for DownUnderCTF!</p>
+<h1 id="beginner">Beginner</h1>
+<h2 id="tldr-please-summarize">tldr please summarize</h2>
+<p>A docx file is attached, might be hiding some kind of secret message.</p>
+<figure><img src="content/ductf24/tldr1.png"><figcaption>
+      <h4>Test</h4>
+    </figcaption>
+</figure>
+
+<figure><img src="content/ductf24/tldr2.png"><figcaption>
+      <h4>Some of the content in the docx file</h4>
+    </figcaption>
+</figure>
+
+<p>The passage is so long, so I did not bother to read.</p>
+<p>As I scroll through the document, something caught my attention. Abnormal tiny wavy lines at the bottom.</p>
+<figure><img src="content/ductf24/tldr3.png"><figcaption>
+      <h4>Sus</h4>
+    </figcaption>
+</figure>
+
+<p>I selected all and changed the font color, which reveals the actual hidden text.
+<figure><img src="content/ductf24/tldr4.png">
+</figure>
+</p>
+<p>Looks like a shell script. After executing the script in Kali Terminal, the flag is found!</p>
+<figure><img src="content/ductf24/tldr5.png">
+</figure>
+
+<p>FLAG: DUCTF{chatgpt_I_n33d_2_3scap3}</p>
+<hr>
+
+		</section>
+
+		<div class="post-tags">
+			
+			
+			
+			<nav class="nav tags">
+				<ul class="tags">
+					
+					<li><a href="/tags/writeup">Writeup</a></li>
+					
+				</ul>
+			</nav>
+			
+			
+		</div>
+		</article>
+</main>
+<footer>
+  <div style="display:flex"></div>
+  <div class="footer-info">
+    2024  © H9 |  <a
+      href="https://github.com/athul/archie"></a><a href="https://gohugo.io"></a>
+  </div>
+</footer>
+</div>
+    </body>
+</html>

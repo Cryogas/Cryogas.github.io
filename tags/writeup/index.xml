@@ -7,14 +7,21 @@
     <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>© H9</copyright>
-    <lastBuildDate>Mon, 01 Jul 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 07 Jul 2024 09:13:25 +0800</lastBuildDate>
     <atom:link href="https://cryogas.github.io/tags/writeup/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DownUnderCTF24 Writeup</title>
+      <link>https://cryogas.github.io/content/ductf24/</link>
+      <pubDate>Sun, 07 Jul 2024 09:13:25 +0800</pubDate>
+      <guid>https://cryogas.github.io/content/ductf24/</guid>
+      <description>💡 DownUnderCTF, the Largest CTF in the Southern Hemisphere!&#xD;The challenges in this CTF are hard! But I managed to solve some of the easier challenges, so here is my writeup for DownUnderCTF!&#xA;MISC Discord The challenge requires us to get the flag in Discord server.&#xA;To do this, we just search for &amp;ldquo;DUCTF&amp;rdquo; in the Discord chat.&#xA;Found Part 1 Looking around for some time, but could&amp;rsquo;nt find the second part.</description>
+    </item>
     <item>
       <title>UIUCTF 2024 Writeup</title>
       <link>https://cryogas.github.io/content/uiuctf24/</link>
       <pubDate>Mon, 01 Jul 2024 00:00:00 +0000</pubDate>
       <guid>https://cryogas.github.io/content/uiuctf24/</guid>
-      <description>💡 UIUCTF2024, hosted by SIGPwny, the cybersecurity club at the University of Illinois Urbana-Champaign (UIUC)&#xD;For this CTF competition, I am only able to do some OSINT challenges, so here is my writeup for UIUCTF2024!&#xA;OSINT Hip With the Youth This challenge requires players to find the flag on the social media of Long Island Subway Authority (LISA).&#xA;From the Instagram account, there are no flags visible.&#xA;Lisa&amp;#39;s Instagram Account After looking through the posts and followers list, nothing useful is found.</description>
+      <description>💡 UIUCTF2024, hosted by SIGPwny, the cybersecurity club at the University of Illinois Urbana-Champaign (UIUC).&#xD;For this CTF competition, I am only able to do some OSINT challenges, so here is my writeup for UIUCTF2024!&#xA;OSINT Hip With the Youth This challenge requires players to find the flag on the social media of Long Island Subway Authority (LISA).&#xA;From the Instagram account, there are no flags visible.&#xA;Lisa&amp;#39;s Instagram Account After looking through the posts and followers list, nothing useful is found.</description>
     </item>
     <item>
       <title>Wani Ctf 2024 Writeup</title>

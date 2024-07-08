@@ -25,8 +25,8 @@
 	
 
 	
-	<link rel="stylesheet" type="text/css" media="screen" href="https://cryogas.github.io/css/main.0cf970bdd7aef36315f9c53bbf15d2cef600fc9614aaddf31bd1f1f467a49632.css" />
-		<link id="darkModeStyle" rel="stylesheet" type="text/css" href="https://cryogas.github.io/css/dark.e8ba5503514a29a4d1aab8cd5d479aa06f9e70a41b8aee25b2375635977a5276.css"   />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://cryogas.github.io/css/main.cc62ec58dd3b5dc0d5a2b580e087443fa50a176518960364c68b625c34fdf8fc.css" />
+		<link id="darkModeStyle" rel="stylesheet" type="text/css" href="https://cryogas.github.io/css/dark.2ff528b39ad35a515e2e7b1ae468297d03c4a2e8be01120714c80c8ad397860a.css"   />
 	
 
 	
@@ -40,15 +40,20 @@
 <body>
         <div class="content"><header>
 	<div class="main">
-		<a href="https://cryogas.github.io/">H9</a>
+		<div class="mainpageLogo">
+			<img src="/content/Enchanted_Book.gif" alt="">
+		</div>
+		<div class = "headerTitle">
+			<a href="https://cryogas.github.io/">H9</a>
+		</div>
 	</div>
 	<nav>
 		
-		<a href="/content">All posts</a>
+		<a class = "header-nav" href="/content">All posts</a>
 		
-		<a href="/about">About</a>
+		<a class = "header-nav" href="/about">About</a>
 		
-		<a href="/tags">Tags</a>
+		<a class = "header-nav" href="/tags">Tags</a>
 		
 		
 	</nav>
@@ -63,9 +68,30 @@
 		
 
 		<section class="body">
+			<br>
+			<br>
+			<div class = "toc">
+				<h1>
+					Table Of Contents
+				</h1>
+				<nav id="TableOfContents">
+  <ul>
+    <li><a href="#forensics">Forensics</a>
+      <ul>
+        <li><a href="#surveillance-of-sus">Surveillance of sus</a></li>
+        <li><a href="#tiny-usb">Tiny USB</a></li>
+        <li><a href="#tiny-10px">Tiny-10px</a></li>
+      </ul>
+    </li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ul>
+</nav>
+			</div>
+			<br>
+			<br>
 			<p>This is my writeup for Wani CTF, an event organized by Osaka University CTF Club, Wani Hackase (Rank 304th)</p>
 <h1 id="forensics">Forensics</h1>
-<h3 id="surveillance-of-sus">Surveillance of sus</h3>
+<h2 id="surveillance-of-sus">Surveillance of sus</h2>
 <p>A binary file is given, and after some investigation, it has a RDP8BMP Header.</p>
 <p><img src="/content/wani/hex.png" alt="Image"></p>
 <!-- raw HTML omitted -->
@@ -74,13 +100,13 @@
 <p><img src="/content/wani/large-icon.png" alt="Image"></p>
 <p>Flag : FLAG{RDP_is_useful_yipeee}</p>
 <hr>
-<h3 id="tiny-usb">Tiny USB</h3>
+<h2 id="tiny-usb">Tiny USB</h2>
 <p>A disk image file is given.</p>
 <p>FTK Imager is used to read and analyze the disc file. After some digging, the flag is found!</p>
 <p><img src="/content/wani/usb.png" alt="Image"></p>
 <p>Flag: FLAG{hey_i_just_bought_a_usb}</p>
 <hr>
-<h3 id="tiny-10px">Tiny-10px</h3>
+<h2 id="tiny-10px">Tiny-10px</h2>
 <p>A small image is given.</p>
 <p><img src="/content/wani/chal_tiny_10px.jpg" alt="Image"></p>
 <p>Based on my instincts, this could be one of those image steganography where the author resized the image of a large image.</p>
@@ -97,6 +123,7 @@
 		</section>
 
 		<div class="post-tags">
+			
 			
 			
 			<nav class="nav tags">

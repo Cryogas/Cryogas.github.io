@@ -25,8 +25,8 @@
 	
 
 	
-	<link rel="stylesheet" type="text/css" media="screen" href="https://cryogas.github.io/css/main.0cf970bdd7aef36315f9c53bbf15d2cef600fc9614aaddf31bd1f1f467a49632.css" />
-		<link id="darkModeStyle" rel="stylesheet" type="text/css" href="https://cryogas.github.io/css/dark.e8ba5503514a29a4d1aab8cd5d479aa06f9e70a41b8aee25b2375635977a5276.css"   />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://cryogas.github.io/css/main.cc62ec58dd3b5dc0d5a2b580e087443fa50a176518960364c68b625c34fdf8fc.css" />
+		<link id="darkModeStyle" rel="stylesheet" type="text/css" href="https://cryogas.github.io/css/dark.2ff528b39ad35a515e2e7b1ae468297d03c4a2e8be01120714c80c8ad397860a.css"   />
 	
 
 	
@@ -40,15 +40,20 @@
 <body>
         <div class="content"><header>
 	<div class="main">
-		<a href="https://cryogas.github.io/">H9</a>
+		<div class="mainpageLogo">
+			<img src="/content/Enchanted_Book.gif" alt="">
+		</div>
+		<div class = "headerTitle">
+			<a href="https://cryogas.github.io/">H9</a>
+		</div>
 	</div>
 	<nav>
 		
-		<a href="/content">All posts</a>
+		<a class = "header-nav" href="/content">All posts</a>
 		
-		<a href="/about">About</a>
+		<a class = "header-nav" href="/about">About</a>
 		
-		<a href="/tags">Tags</a>
+		<a class = "header-nav" href="/tags">Tags</a>
 		
 		
 	</nav>
@@ -63,6 +68,24 @@
 		
 
 		<section class="body">
+			<br>
+			<br>
+			<div class = "toc">
+				<h1>
+					Table Of Contents
+				</h1>
+				<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#ps-finally-i-am-able-to-code-something-that-return-the-same-results">Ps: Finally, I am able to code something that return the same results!</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+			</div>
+			<br>
+			<br>
 			<p>For this CTF, I only solved one question by myself, so here is the writeup for awa-jelly (reverse engineering)</p>
 <p><img src="/content/vsctf/image.png" alt="Image"></p>
 <p>Basically, the challenge is to recover the redacted input text so that the output is same as displayed.</p>
@@ -111,6 +134,7 @@
 		</section>
 
 		<div class="post-tags">
+			
 			
 			
 			<nav class="nav tags">
