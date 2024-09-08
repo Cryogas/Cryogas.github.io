@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html><head lang="en">
+	<meta charset="utf-8" />
+	<link rel="icon" href="/content/Enchanted_Book.gif">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>H9 |  FSIIEC CTF Writeup</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Introduction This is my writeup for FSIIEC CTF.
+Boss Password An obfuscated passage is given.
+To deobfuscate the passage, look at the hint closely&hellip; Hint The hint obviosuly states the key is &ldquo;to be as sneaky as possible&rdquo;
+Just take the message literally and use it as a key to decode the message and convert the message to MD5 hash. Solved! Kagegakure To solve this challenge, I used curl -L command on Linux (Ubuntu) to read all the contents on the website." />
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content="https://cryogas.github.io/content/fsiiecctf24/">
+  <meta property="og:site_name" content="H9">
+  <meta property="og:title" content=" FSIIEC CTF Writeup">
+  <meta property="og:description" content="Introduction This is my writeup for FSIIEC CTF.
+Boss Password An obfuscated passage is given.
+To deobfuscate the passage, look at the hint closely… Hint The hint obviosuly states the key is “to be as sneaky as possible”
+Just take the message literally and use it as a key to decode the message and convert the message to MD5 hash. Solved! Kagegakure To solve this challenge, I used curl -L command on Linux (Ubuntu) to read all the contents on the website.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="content">
+    <meta property="article:published_time" content="2024-09-08T21:50:02+08:00">
+    <meta property="article:modified_time" content="2024-09-08T21:50:02+08:00">
+    <meta property="article:tag" content="CTF">
+    <meta property="article:tag" content="Cybersecurity">
+    <meta property="article:tag" content="Writeup">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content=" FSIIEC CTF Writeup">
+  <meta name="twitter:description" content="Introduction This is my writeup for FSIIEC CTF.
+Boss Password An obfuscated passage is given.
+To deobfuscate the passage, look at the hint closely… Hint The hint obviosuly states the key is “to be as sneaky as possible”
+Just take the message literally and use it as a key to decode the message and convert the message to MD5 hash. Solved! Kagegakure To solve this challenge, I used curl -L command on Linux (Ubuntu) to read all the contents on the website.">
+
+	
+        <link href="https://cryogas.github.io/css/fonts.11a1877508139eac0b5b4852ceb110c35641b3533321e66e39149e901ed5756b.css" rel="stylesheet">
+	
+
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="https://cryogas.github.io/css/main.cc62ec58dd3b5dc0d5a2b580e087443fa50a176518960364c68b625c34fdf8fc.css" />
+		<link id="darkModeStyle" rel="stylesheet" type="text/css" href="https://cryogas.github.io/css/dark.2ff528b39ad35a515e2e7b1ae468297d03c4a2e8be01120714c80c8ad397860a.css"   />
+	
+
+	
+	
+
+	
+	
+	
+	
+</head>
+<body>
+        <div class="content"><header>
+	<div class="main">
+		<div class="mainpageLogo">
+			<img src="/content/Enchanted_Book.gif" alt="">
+		</div>
+		<div class = "headerTitle">
+			<a href="https://cryogas.github.io/">H9</a>
+		</div>
+	</div>
+	<nav>
+		
+		<a class = "header-nav" href="/content">All posts</a>
+		
+		<a class = "header-nav" href="/about">About</a>
+		
+		<a class = "header-nav" href="/tags">Tags</a>
+		
+		
+	</nav>
+</header>
+
+<main>
+	<article>
+		<div class="title">
+			<h1 class="title"> FSIIEC CTF Writeup</h1>
+			<div class="meta">Posted on Sep 8, 2024</div>
+		</div>
+		
+
+		<section class="body">
+			<br>
+			<br>
+			<div class = "toc">
+				<h1>
+					Table Of Contents
+				</h1>
+				<nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#boss-password">Boss Password</a></li>
+    <li><a href="#kagegakure">Kagegakure</a></li>
+    <li><a href="#usbchall">usbchall</a></li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ul>
+</nav>
+			</div>
+			<br>
+			<br>
+			<h1 id="introduction">Introduction</h1>
+<p>This is my writeup for FSIIEC CTF.</p>
+<h1 id="boss-password">Boss Password</h1>
+<p>An obfuscated passage is given.</p>
+<p>To deobfuscate the passage, look at the hint closely&hellip;
+<figure><img src="content/fsiiectf24/bosshint.png"><figcaption>
+      <h4>Hint</h4>
+    </figcaption>
+</figure>
+</p>
+<p>The hint obviosuly states the key is &ldquo;to be as sneaky as possible&rdquo;</p>
+<p>Just take the message literally and use it as a key to decode the message and convert the message to MD5 hash.
+<figure><img src="content/fsiiectf24/bosspassword.png"><figcaption>
+      <h4>Solved!</h4>
+    </figcaption>
+</figure>
+</p>
+<hr>
+<h1 id="kagegakure">Kagegakure</h1>
+<p>To solve this challenge, I used curl -L command on Linux (Ubuntu) to read all the contents on the website.</p>
+<p>The flag.php looks suspicious, so I change the path to query the &lsquo;flag&rsquo; page, and the flag is discovered!</p>
+<figure><img src="content/fsiiectf24/kagegakure.png"><figcaption>
+      <h4>The flag</h4>
+    </figcaption>
+</figure>
+
+<hr>
+<h1 id="usbchall">usbchall</h1>
+<p>A image file was given, containing an image and a PDF</p>
+<p>To solve the challenge, I used Aperi Solve to analyze the image. And the flag is found in the &lsquo;Strings&rsquo; section.
+<figure><img src="content/fsiiectf24/usbchall.png"><figcaption>
+      <h4>Flag</h4>
+    </figcaption>
+</figure>
+</p>
+<h1 id="conclusion">Conclusion</h1>
+<p>While there are some other challenges I solved, they are not posted as they were too easy for everyone.</p>
+<p>(Almost solved a hard OSINT challenge but&hellip; )</p>
+<p>Until then!</p>
+
+		</section>
+
+		<div class="post-tags">
+			
+			
+			
+			<nav class="nav tags">
+				<ul class="tags">
+					
+					<li><a href="/tags/ctf">CTF</a></li>
+					
+					<li><a href="/tags/cybersecurity">Cybersecurity</a></li>
+					
+					<li><a href="/tags/writeup">Writeup</a></li>
+					
+				</ul>
+			</nav>
+			
+			
+		</div>
+		</article>
+</main>
+<footer>
+  <div style="display:flex"></div>
+  <div class="footer-info">
+    2024  © H9 |  <a
+      href="https://github.com/athul/archie"></a><a href="https://gohugo.io"></a>
+  </div>
+</footer>
+
+
+  
+
+
+</div>
+    </body>
+</html>

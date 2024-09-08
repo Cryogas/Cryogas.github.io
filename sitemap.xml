@@ -3,24 +3,27 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://cryogas.github.io/content/</loc>
-    <lastmod>2024-07-07T09:13:25+08:00</lastmod>
+    <lastmod>2024-09-08T21:50:02+08:00</lastmod>
+  </url><url>
+    <loc>https://cryogas.github.io/content/fsiiecctf24/</loc>
+    <lastmod>2024-09-08T21:50:02+08:00</lastmod>
   </url><url>
     <loc>https://cryogas.github.io/tags/ctf/</loc>
-    <lastmod>2024-07-07T09:13:25+08:00</lastmod>
+    <lastmod>2024-09-08T21:50:02+08:00</lastmod>
   </url><url>
     <loc>https://cryogas.github.io/tags/cybersecurity/</loc>
-    <lastmod>2024-07-07T09:13:25+08:00</lastmod>
-  </url><url>
-    <loc>https://cryogas.github.io/content/ductf24/</loc>
-    <lastmod>2024-07-07T09:13:25+08:00</lastmod>
+    <lastmod>2024-09-08T21:50:02+08:00</lastmod>
   </url><url>
     <loc>https://cryogas.github.io/</loc>
-    <lastmod>2024-07-07T09:13:25+08:00</lastmod>
+    <lastmod>2024-09-08T21:50:02+08:00</lastmod>
   </url><url>
     <loc>https://cryogas.github.io/tags/</loc>
-    <lastmod>2024-07-07T09:13:25+08:00</lastmod>
+    <lastmod>2024-09-08T21:50:02+08:00</lastmod>
   </url><url>
     <loc>https://cryogas.github.io/tags/writeup/</loc>
+    <lastmod>2024-09-08T21:50:02+08:00</lastmod>
+  </url><url>
+    <loc>https://cryogas.github.io/content/ductf24/</loc>
     <lastmod>2024-07-07T09:13:25+08:00</lastmod>
   </url><url>
     <loc>https://cryogas.github.io/content/uiuctf24/</loc>

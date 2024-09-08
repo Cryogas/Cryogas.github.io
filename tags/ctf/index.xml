@@ -7,8 +7,15 @@
     <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>© H9</copyright>
-    <lastBuildDate>Sun, 07 Jul 2024 09:13:25 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 08 Sep 2024 21:50:02 +0800</lastBuildDate>
     <atom:link href="https://cryogas.github.io/tags/ctf/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title> FSIIEC CTF Writeup</title>
+      <link>https://cryogas.github.io/content/fsiiecctf24/</link>
+      <pubDate>Sun, 08 Sep 2024 21:50:02 +0800</pubDate>
+      <guid>https://cryogas.github.io/content/fsiiecctf24/</guid>
+      <description>Introduction This is my writeup for FSIIEC CTF.&#xA;Boss Password An obfuscated passage is given.&#xA;To deobfuscate the passage, look at the hint closely&amp;hellip; Hint The hint obviosuly states the key is &amp;ldquo;to be as sneaky as possible&amp;rdquo;&#xA;Just take the message literally and use it as a key to decode the message and convert the message to MD5 hash. Solved! Kagegakure To solve this challenge, I used curl -L command on Linux (Ubuntu) to read all the contents on the website.</description>
+    </item>
     <item>
       <title>DownUnderCTF24 Writeup</title>
       <link>https://cryogas.github.io/content/ductf24/</link>
