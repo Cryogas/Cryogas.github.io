@@ -7,8 +7,15 @@
     <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>© nem4ros</copyright>
-    <lastBuildDate>Sun, 08 Sep 2024 21:50:02 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 29 Sep 2024 15:10:12 +0800</lastBuildDate>
     <atom:link href="https://cryogas.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>IBOH 2024 Writeup</title>
+      <link>https://cryogas.github.io/content/iboh24/</link>
+      <pubDate>Sun, 29 Sep 2024 15:10:12 +0800</pubDate>
+      <guid>https://cryogas.github.io/content/iboh24/</guid>
+      <description>Introduction The annual main event of CTF in Asia Pacific University (APU): International Battle of Hackers, hosted by FSEC-CC, with amazing CTF players from not only Malaysia, but other countries such as Singapore and Indonesia participating.&#xA;The challenges were difficult in my opinion, and most of them were removed after the event, therefore I did not manage to screenshot the solution for most of them.&#xA;Therefore, here is my humble writeup for one of the crypto challenge: I&amp;rsquo;ll Kill Yall.</description>
+    </item>
     <item>
       <title> FSIIEC CTF Writeup</title>
       <link>https://cryogas.github.io/content/fsiiecctf24/</link>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html><head lang="en">
+	<meta charset="utf-8" />
+	<link rel="icon" href="/content/Enchanted_Book.gif">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>nem4ros | IBOH 2024 Writeup</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Introduction The annual main event of CTF in Asia Pacific University (APU): International Battle of Hackers, hosted by FSEC-CC, with amazing CTF players from not only Malaysia, but other countries such as Singapore and Indonesia participating.
+The challenges were difficult in my opinion, and most of them were removed after the event, therefore I did not manage to screenshot the solution for most of them.
+Therefore, here is my humble writeup for one of the crypto challenge: I&rsquo;ll Kill Yall." />
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content="https://cryogas.github.io/content/iboh24/">
+  <meta property="og:site_name" content="nem4ros">
+  <meta property="og:title" content="IBOH 2024 Writeup">
+  <meta property="og:description" content="Introduction The annual main event of CTF in Asia Pacific University (APU): International Battle of Hackers, hosted by FSEC-CC, with amazing CTF players from not only Malaysia, but other countries such as Singapore and Indonesia participating.
+The challenges were difficult in my opinion, and most of them were removed after the event, therefore I did not manage to screenshot the solution for most of them.
+Therefore, here is my humble writeup for one of the crypto challenge: I’ll Kill Yall.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="content">
+    <meta property="article:published_time" content="2024-09-29T15:10:12+08:00">
+    <meta property="article:modified_time" content="2024-09-29T15:10:12+08:00">
+    <meta property="article:tag" content="CTF">
+    <meta property="article:tag" content="Cybersecurity">
+    <meta property="article:tag" content="Writeup">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="IBOH 2024 Writeup">
+  <meta name="twitter:description" content="Introduction The annual main event of CTF in Asia Pacific University (APU): International Battle of Hackers, hosted by FSEC-CC, with amazing CTF players from not only Malaysia, but other countries such as Singapore and Indonesia participating.
+The challenges were difficult in my opinion, and most of them were removed after the event, therefore I did not manage to screenshot the solution for most of them.
+Therefore, here is my humble writeup for one of the crypto challenge: I’ll Kill Yall.">
+
+	
+        <link href="https://cryogas.github.io/css/fonts.11a1877508139eac0b5b4852ceb110c35641b3533321e66e39149e901ed5756b.css" rel="stylesheet">
+	
+
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="https://cryogas.github.io/css/main.cc62ec58dd3b5dc0d5a2b580e087443fa50a176518960364c68b625c34fdf8fc.css" />
+		<link id="darkModeStyle" rel="stylesheet" type="text/css" href="https://cryogas.github.io/css/dark.2ff528b39ad35a515e2e7b1ae468297d03c4a2e8be01120714c80c8ad397860a.css"   />
+	
+
+	
+	
+
+	
+	
+	
+	
+</head>
+<body>
+        <div class="content"><header>
+	<div class="main">
+		<div class="mainpageLogo">
+			<img src="/content/Enchanted_Book.gif" alt="">
+		</div>
+		<div class = "headerTitle">
+			<a href="https://cryogas.github.io/">nem4ros</a>
+		</div>
+	</div>
+	<nav>
+		
+		<a class = "header-nav" href="/content">All posts</a>
+		
+		<a class = "header-nav" href="/about">About</a>
+		
+		<a class = "header-nav" href="/tags">Tags</a>
+		
+		
+	</nav>
+</header>
+
+<main>
+	<article>
+		<div class="title">
+			<h1 class="title">IBOH 2024 Writeup</h1>
+			<div class="meta">Posted on Sep 29, 2024</div>
+		</div>
+		
+
+		<section class="body">
+			<br>
+			<br>
+			<div class = "toc">
+				<h1>
+					Table Of Contents
+				</h1>
+				<nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#crypto-ill-kill-yall">Crypto: I&rsquo;ll Kill Yall</a></li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ul>
+</nav>
+			</div>
+			<br>
+			<br>
+			<h1 id="introduction">Introduction</h1>
+<figure><img src="/content/IBOH24/iboh.jpeg">
+</figure>
+
+<p>The annual main event of CTF in Asia Pacific University (APU): International Battle of Hackers, hosted by <a href="https://www.linkedin.com/company/forensic-security-research-center-student-section-apu/posts/?feedView=all">FSEC-CC</a>, with amazing CTF players from not only Malaysia, but other countries such as Singapore and Indonesia participating.</p>
+<p>The challenges were difficult in my opinion, and most of them were removed after the event, therefore I did not manage to screenshot the solution for most of them.</p>
+<p>Therefore, here is my humble writeup for one of the crypto challenge: I&rsquo;ll Kill Yall. Enjoy.</p>
+<figure><img src="/content/honest.jpg"><figcaption>
+      <h4>It&#39;s honest work</h4>
+    </figcaption>
+</figure>
+
+<h1 id="crypto-ill-kill-yall">Crypto: I&rsquo;ll Kill Yall</h1>
+<p>The challenge provides an attachment of a hand-written message, looks like it&rsquo;s ciphered.</p>
+<figure><img src="/content/IBOH24/s.png"><figcaption>
+      <h4>Creepy Message</h4>
+    </figcaption>
+</figure>
+
+<p>After searching in the web, the cipher is identified as the &lsquo;Zodiac Killer Cipher&rsquo;. One of the biggest mystery till this day.</p>
+<p>At first the cipher text was unreadable, however, the symbol with a circle and cross should be at the bottom, therefore the image is rotated 180 degrees.</p>
+<p><figure><img src="/content/IBOH24/ori.png"><figcaption>
+      <h4>Found this online</h4>
+    </figcaption>
+</figure>
+
+<figure><img src="/content/IBOH24/s2.png"><figcaption>
+      <h4>Readable now..</h4>
+    </figcaption>
+</figure>
+</p>
+<p>To crack the cipher, head on to this <a href="https://www.dcode.fr/zodiac-killer-cipher">webpage</a> and enter the code manually.</p>
+<p>This is the returned message, which doesn&rsquo;t mean a thing.
+<figure><img src="/content/IBOH24/fist_dec.png"><figcaption>
+      <h4>Creepy Message</h4>
+    </figcaption>
+</figure>
+</p>
+<p>To reveal the full ciphered message, increase the height byte value using Hexeditor, and the full message is revealed.
+<figure><img src="/content/IBOH24/chgHex.png"><figcaption>
+      <h4>Increase height byte</h4>
+    </figcaption>
+</figure>
+
+<figure><img src="/content/IBOH24/test.png"><figcaption>
+      <h4>Increase height byte</h4>
+    </figcaption>
+</figure>
+</p>
+<p>Note that the original image cannot be rotated before changing the height byte, else the note will not reveal.</p>
+<figure><img src="/content/IBOH24/totata.png"><figcaption>
+      <h4>Failed to reveal message</h4>
+    </figcaption>
+</figure>
+
+<p>Rotate the revealed cipher and redo the deciphering process , a plaintext message will show 😨.
+<figure><img src="/content/IBOH24/flagstring.png"><figcaption>
+      <h4>Deciphered Message</h4>
+    </figcaption>
+</figure>
+</p>
+<p>The flag should start after &lsquo;THIS IS THE FLAG&rsquo;, which is &lsquo;KILLINGPEOPLEE?AFSTOPFED&rsquo;.
+But the flag was rejected when entered.</p>
+<p>After sanity checking with the challenge creator, turns out the question mark should be replaced by &lsquo;z&rsquo;, as there is a bug within the calculation of the deciphering process, causing the question mark to appear.</p>
+<figure><img src="/content/IBOH24/message.png"><figcaption>
+      <h4>Sanity Message</h4>
+    </figcaption>
+</figure>
+
+<p>I was dumb enough to try the new flag &lsquo;KILLINGPEOPLEEZAFSTOPFED&rsquo;, which was rejected again btw.</p>
+<p>After reading the message a few times, it doesn&rsquo;t make sense to include everything after EZAF.</p>
+<p>FLAG: IBOH24{KILLINGPEOPLEEZAF}</p>
+<hr>
+<h1 id="conclusion">Conclusion</h1>
+<p>Our team have won 4th place for local category! 🥳</p>
+<p>Could not have done it without my teammates:
+<a href="https://www.linkedin.com/in/pua-zhen-da-31165b248/">ZD</a> &amp; <a href="https://www.linkedin.com/in/yvonne-chan-217862266/">Yvonne</a> 🥰🥰🥰
+<br />
+<br />
+Till next time! 😬
+<figure><img src="/content/uwma.gif">
+</figure>
+
+<br /></p>
+<hr>
+
+		</section>
+
+		<div class="post-tags">
+			
+			
+			
+			<nav class="nav tags">
+				<ul class="tags">
+					
+					<li><a href="/tags/ctf">CTF</a></li>
+					
+					<li><a href="/tags/cybersecurity">Cybersecurity</a></li>
+					
+					<li><a href="/tags/writeup">Writeup</a></li>
+					
+				</ul>
+			</nav>
+			
+			
+		</div>
+		</article>
+</main>
+<footer>
+  <div style="display:flex"></div>
+  <div class="footer-info">
+    2024  © nem4ros |  <a
+      href="https://github.com/athul/archie"></a><a href="https://gohugo.io"></a>
+  </div>
+</footer>
+
+
+  
+
+
+</div>
+    </body>
+</html>
