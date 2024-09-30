@@ -93,7 +93,7 @@ Therefore, here is my humble writeup for one of the crypto challenge: I’ll Kil
 			<br>
 			<br>
 			<h1 id="introduction">Introduction</h1>
-<figure><img src="/content/IBOH24/iboh.jpeg">
+<figure><img src="/content/iboh24/content/iboh24/iboh.jpeg">
 </figure>
 
 <p>The annual main event of CTF in Asia Pacific University (APU): International Battle of Hackers, hosted by <a href="https://www.linkedin.com/company/forensic-security-research-center-student-section-apu/posts/?feedView=all">FSEC-CC</a>, with amazing CTF players from not only Malaysia, but other countries such as Singapore and Indonesia participating.</p>
@@ -106,49 +106,49 @@ Therefore, here is my humble writeup for one of the crypto challenge: I’ll Kil
 
 <h1 id="crypto-ill-kill-yall">Crypto: I&rsquo;ll Kill Yall</h1>
 <p>The challenge provides an attachment of a hand-written message, looks like it&rsquo;s ciphered.</p>
-<figure><img src="/content/IBOH24/s.png"><figcaption>
+<figure><img src="/content/iboh24/content/iboh24/s.png"><figcaption>
       <h4>Creepy Message</h4>
     </figcaption>
 </figure>
 
 <p>After searching in the web, the cipher is identified as the &lsquo;Zodiac Killer Cipher&rsquo;. One of the biggest mystery till this day.</p>
 <p>At first the cipher text was unreadable, however, the symbol with a circle and cross should be at the bottom, therefore the image is rotated 180 degrees.</p>
-<p><figure><img src="/content/IBOH24/ori.png"><figcaption>
+<p><figure><img src="/content/iboh24/content/iboh24/ori.png"><figcaption>
       <h4>Found this online</h4>
     </figcaption>
 </figure>
 
-<figure><img src="/content/IBOH24/s2.png"><figcaption>
+<figure><img src="/content/iboh24/content/iboh24/s2.png"><figcaption>
       <h4>Readable now..</h4>
     </figcaption>
 </figure>
 </p>
 <p>To crack the cipher, head on to this <a href="https://www.dcode.fr/zodiac-killer-cipher">webpage</a> and enter the code manually.</p>
 <p>This is the returned message, which doesn&rsquo;t mean a thing.
-<figure><img src="/content/IBOH24/fist_dec.png"><figcaption>
+<figure><img src="/content/iboh24/content/iboh24/fist_dec.png"><figcaption>
       <h4>Creepy Message</h4>
     </figcaption>
 </figure>
 </p>
 <p>To reveal the full ciphered message, increase the height byte value using Hexeditor, and the full message is revealed.
-<figure><img src="/content/IBOH24/chgHex.png"><figcaption>
+<figure><img src="/content/iboh24/content/iboh24/chgHex.png"><figcaption>
       <h4>Increase height byte</h4>
     </figcaption>
 </figure>
 
-<figure><img src="/content/IBOH24/test.png"><figcaption>
+<figure><img src="/content/iboh24/content/iboh24/test.png"><figcaption>
       <h4>Increase height byte</h4>
     </figcaption>
 </figure>
 </p>
 <p>Note that the original image cannot be rotated before changing the height byte, else the note will not reveal.</p>
-<figure><img src="/content/IBOH24/totata.png"><figcaption>
+<figure><img src="/content/iboh24/content/iboh24/totata.png"><figcaption>
       <h4>Failed to reveal message</h4>
     </figcaption>
 </figure>
 
 <p>Rotate the revealed cipher and redo the deciphering process , a plaintext message will show 😨.
-<figure><img src="/content/IBOH24/flagstring.png"><figcaption>
+<figure><img src="/content/iboh24/content/iboh24/flagstring.png"><figcaption>
       <h4>Deciphered Message</h4>
     </figcaption>
 </figure>
@@ -156,7 +156,7 @@ Therefore, here is my humble writeup for one of the crypto challenge: I’ll Kil
 <p>The flag should start after &lsquo;THIS IS THE FLAG&rsquo;, which is &lsquo;KILLINGPEOPLEE?AFSTOPFED&rsquo;.
 But the flag was rejected when entered.</p>
 <p>After sanity checking with the challenge creator, turns out the question mark should be replaced by &lsquo;z&rsquo;, as there is a bug within the calculation of the deciphering process, causing the question mark to appear.</p>
-<figure><img src="/content/IBOH24/message.png"><figcaption>
+<figure><img src="/content/iboh24/content/iboh24/message.png"><figcaption>
       <h4>Sanity Message</h4>
     </figcaption>
 </figure>
