@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Abouts on nem4ros</title>
-    <link>https://cryogas.github.io/about/</link>
+    <link>http://localhost:1313/about/</link>
     <description>Recent content in Abouts on nem4ros</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>© nem4ros</copyright>
-    <atom:link href="https://cryogas.github.io/about/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/about/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
-      <link>https://cryogas.github.io/about/this/</link>
+      <link>http://localhost:1313/about/this/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://cryogas.github.io/about/this/</guid>
+      <guid>http://localhost:1313/about/this/</guid>
       <description>Name: nem4ros</description>
     </item>
   </channel>
