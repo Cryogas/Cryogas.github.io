@@ -7,8 +7,15 @@
     <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>© nem4ros</copyright>
-    <lastBuildDate>Sun, 29 Sep 2024 15:10:12 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 03 Nov 2024 07:32:05 +0800</lastBuildDate>
     <atom:link href="https://cryogas.github.io/tags/writeup/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>USC CTF Writeup</title>
+      <link>https://cryogas.github.io/content/uscctf24/</link>
+      <pubDate>Sun, 03 Nov 2024 07:32:05 +0800</pubDate>
+      <guid>https://cryogas.github.io/content/uscctf24/</guid>
+      <description>Introduction Over the weekend, I had participated in USC CTF hosted by University of Southern California. Here are some writeup of challenges I managed to solve. It&amp;#39;s honest work Concoction (rev) Finally my first rev writeup! (it&amp;rsquo;s a beginner&amp;rsquo;s challenge 😅)&#xA;An executable file is given, asking for some ingredients to craft a potion.&#xA;To solve the challenge, use Ghidra to view the decompiled code. There are a lot of if-else conditions.</description>
+    </item>
     <item>
       <title>IBOH 2024 Writeup</title>
       <link>https://cryogas.github.io/content/iboh24/</link>
