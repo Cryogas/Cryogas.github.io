@@ -14,7 +14,7 @@
       <link>https://cryogas.github.io/content/wgmy24/</link>
       <pubDate>Sun, 29 Dec 2024 09:16:50 +0800</pubDate>
       <guid>https://cryogas.github.io/content/wgmy24/</guid>
-      <description>Introduction Due to some time management issues, I started to solve the challenges 3 hours before the competition ends. Nevertheless, here are my write-ups for 2 easy challenges. It&amp;#39;s honest work The DCM Meta (Easy) This challenge was supposed to be easy, but I managed to not solve it because one minor error in my code. 🤦🏻 (I set i &amp;lt; 31 , which made my flag length is less by 1)</description>
+      <description>Introduction This is my first time participating in wargames.my.&#xA;Due to some time management issues, I started to solve the challenges 3 hours before the competition ends. Nevertheless, here are my write-ups for 2 easy challenges. It&amp;#39;s honest work The DCM Meta (Easy) This challenge was supposed to be easy, but I managed to not solve it because one minor error in my code. 🤦🏻 (I set i &amp;lt; 31 , which made my flag length is less by 1)</description>
     </item>
     <item>
       <title>USC CTF Writeup</title>
