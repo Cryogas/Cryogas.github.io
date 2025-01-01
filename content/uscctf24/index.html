@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html><head lang="en">
-	<meta charset="utf-8" />
-	<link rel="icon" href="/content/Enchanted_Book.gif">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>nem4ros | USC CTF Writeup</title><meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Writeup for USC CTF" />
-	<meta property="og:image" content=""/>
-	<meta property="og:url" content="https://cryogas.github.io/content/uscctf24/">
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Writeup for USC CTF">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="https://cryogas.github.io/content/uscctf24/">
   <meta property="og:site_name" content="nem4ros">
   <meta property="og:title" content="USC CTF Writeup">
   <meta property="og:description" content="Writeup for USC CTF">
@@ -17,75 +18,211 @@
     <meta property="article:tag" content="CTF">
     <meta property="article:tag" content="Cybersecurity">
     <meta property="article:tag" content="Writeup">
-
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="USC CTF Writeup">
-  <meta name="twitter:description" content="Writeup for USC CTF">
-
-	
-        <link href="https://cryogas.github.io/css/fonts.11a1877508139eac0b5b4852ceb110c35641b3533321e66e39149e901ed5756b.css" rel="stylesheet">
-	
-
-	
-	<link rel="stylesheet" type="text/css" media="screen" href="https://cryogas.github.io/css/main.dc125976a44e69a3021d8f63ad87d91471353a62c612f4a4f6b3dd7d5960e55f.css" />
-		<link id="darkModeStyle" rel="stylesheet" type="text/css" href="https://cryogas.github.io/css/dark.0c8eaf63bd74b2bb8c694fff54f5f62fb8b15a9ac20ccbfcae91329adfec3f0b.css"   />
-	
-
-	
-	
-
-	
-	
-	
-	
+<title>USC CTF Writeup | nem4ros</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="https://cryogas.github.io/content/uscctf24/">
+<link rel="stylesheet" href="/book.min.dcb0a268a38ba47e37bad4c27b5f27872022ebf3be5bda244676bd2cf5d580ad.css" integrity="sha256-3LCiaKOLpH43utTCe18nhyAi6/O&#43;W9okRna9LPXVgK0=" crossorigin="anonymous">
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.33859edee8106315e21bf0f0eb75a1d22961342de325ad87cb5bdb9cff466a0e.js" integrity="sha256-M4We3ugQYxXiG/Dw63Wh0ilhNC3jJa2Hy1vbnP9Gag4=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
 </head>
-<body>
-        <div class="content"><header>
-	<div class="main">
-		<div class="mainpageLogo">
-			<img src="/content/Enchanted_Book.gif" alt="">
-		</div>
-		<div class = "headerTitle">
-			<a href="https://cryogas.github.io/">nem4ros</a>
-		</div>
-	</div>
-	<nav>
-		
-		<a class = "header-nav" href="/content">All posts</a>
-		
-		<a class = "header-nav" href="/about">About</a>
-		
-		<a class = "header-nav" href="/tags">Tags</a>
-		
-		
-	</nav>
-</header>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>nem4ros</span>
+  </a>
+</h2>
 
-<main>
-	<article>
-		<div class="title">
-			
-			<h1 class="title">USC CTF Writeup</h1>
-			<div class="meta">Posted on Nov 3, 2024</div>
-			
 
-			
-			
-	
-			<p>Reading time: 3 minutes and
-			43 seconds.</p>
-		</div>
+<div class="book-search hidden">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
 
-		
 
-		<section class="body">
-			<br>
-			<br>
-			<div class = "toc">
-				<h1>
-					Table Of Contents
-				</h1>
-				<nav id="TableOfContents">
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/content/wgmy24/" class="">WGMY 2024 Writeup</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/content/uscctf24/" class="active">USC CTF Writeup</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/content/IBOH24/" class="">IBOH 2024 Writeup</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/content/FSIIECCTF24/" class=""> FSIIEC CTF Writeup</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/content/DUCTF24/" class="">DownUnderCTF24 Writeup</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/content/UIUCTF24/" class="">UIUCTF 2024 Writeup</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/content/wani-ctf/" class="">Wani Ctf 2024 Writeup</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/content/vsctf/" class="">VSCTF Awa-Jelly Writeup</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>USC CTF Writeup</h3>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
   <ul>
     <li><a href="#introduction">Introduction</a></li>
     <li><a href="#concoction-rev">Concoction (rev)</a></li>
@@ -95,12 +232,20 @@
     <li><a href="#conclusion">Conclusion</a></li>
   </ul>
 </nav>
-				
-			</div>
-			<br>
-			<br>
 
-			<h1 id="introduction">Introduction</h1>
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h1 id="introduction">
+  Introduction
+  <a class="anchor" href="#introduction">#</a>
+</h1>
 <figure><img src="/content/uscctf24/logopic.png">
 </figure>
 
@@ -111,7 +256,10 @@ Here are some writeup of challenges I managed to solve.
     </figcaption>
 </figure>
 </p>
-<h1 id="concoction-rev">Concoction (rev)</h1>
+<h1 id="concoction-rev">
+  Concoction (rev)
+  <a class="anchor" href="#concoction-rev">#</a>
+</h1>
 <p>Finally my first rev writeup! (it&rsquo;s a beginner&rsquo;s challenge 😅)<br>
 <br />
 An executable file is given, asking for some ingredients to craft a potion.</p>
@@ -143,7 +291,10 @@ The string input prompt in the end must be &ldquo;decompiler&rdquo; as it is als
 </figure>
 
 <p>FLAG: CYBORG{RECIPE=7914-111100-2310-51337-42154142-9111-decompiler}</p>
-<h1 id="tommys-artventures-web">Tommy&rsquo;s Artventures (Web)</h1>
+<h1 id="tommys-artventures-web">
+  Tommy&rsquo;s Artventures (Web)
+  <a class="anchor" href="#tommys-artventures-web">#</a>
+</h1>
 <figure><img src="/content/uscctf24/tom1.png">
 </figure>
 
@@ -186,7 +337,10 @@ The string input prompt in the end must be &ldquo;decompiler&rdquo; as it is als
 </figure>
 
 <p>FLAG: CYBORG{oce4n5_auth3N71ca7i0N}</p>
-<h1 id="buildings-osint">Buildings (OSINT)</h1>
+<h1 id="buildings-osint">
+  Buildings (OSINT)
+  <a class="anchor" href="#buildings-osint">#</a>
+</h1>
 <p>A pdf file was attached with contents of buildings, and I assumed that these buildings are in USC.</p>
 <p>The flag format is CRYPTO, therefore no investigation is needed for the first 6 pictures (pictures before the curly braces).</p>
 <p>These are the names of the buildings for the flags, index them accordingly using their acronyms, and the flag is found!
@@ -201,7 +355,10 @@ The string input prompt in the end must be &ldquo;decompiler&rdquo; as it is als
 </figure>
 </p>
 <p>FLAG: CRYPTO{BRICKS}</p>
-<h1 id="redwoods-misc">RedWoods (misc)</h1>
+<h1 id="redwoods-misc">
+  RedWoods (misc)
+  <a class="anchor" href="#redwoods-misc">#</a>
+</h1>
 <figure><img src="/content/uscctf24/red1.png">
 </figure>
 
@@ -232,7 +389,10 @@ The string input prompt in the end must be &ldquo;decompiler&rdquo; as it is als
 
 <p>FLAG: CYBORG{HEARD_TR33_F4LL}</p>
 <br />
-<h1 id="conclusion">Conclusion</h1>
+<h1 id="conclusion">
+  Conclusion
+  <a class="anchor" href="#conclusion">#</a>
+</h1>
 <p>Overall, the CTF contains various challenges suitable for players from different levels. Some challenges were really out of my knowledge.  I will try to understand them and do better next time. (I got rank 79th btw)
 <br />
 Anyway&hellip;</p>
@@ -241,41 +401,75 @@ Anyway&hellip;</p>
 <figure><img src="/content/uwma.gif">
 </figure>
 
+</article>
+ 
+      
 
-		</section>
-		<div class="post-tags">
-			
-			
-			
-			<nav class="nav tags">
-				<ul class="tags">
-					
-					<li><a href="/tags/ctf">CTF</a></li>
-					
-					<li><a href="/tags/cybersecurity">Cybersecurity</a></li>
-					
-					<li><a href="/tags/writeup">Writeup</a></li>
-					
-				</ul>
-			</nav>
-			
-			
-		</div>
-		</article>
-	
-</main>
-<footer>
-  <div style="display:flex"></div>
-  <div class="footer-info">
-    2024  © nem4ros |  <a
-      href="https://github.com/athul/archie"></a><a href="https://gohugo.io"></a>
-  </div>
-</footer>
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
 
 
-  
+
 
 
 </div>
-    </body>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#concoction-rev">Concoction (rev)</a></li>
+    <li><a href="#tommys-artventures-web">Tommy&rsquo;s Artventures (Web)</a></li>
+    <li><a href="#buildings-osint">Buildings (OSINT)</a></li>
+    <li><a href="#redwoods-misc">RedWoods (misc)</a></li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+

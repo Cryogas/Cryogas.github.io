@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Writeup for APU IBOH event!">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/IBOH24/">
+  <meta property="og:site_name" content="nem4ros">
+  <meta property="og:title" content="IBOH 2024 Writeup">
+  <meta property="og:description" content="Writeup for APU IBOH event!">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:published_time" content="2024-09-29T15:10:12+08:00">
+    <meta property="article:modified_time" content="2024-09-29T15:10:12+08:00">
+    <meta property="article:tag" content="CTF">
+    <meta property="article:tag" content="Cybersecurity">
+    <meta property="article:tag" content="Writeup">
+<title>IBOH 2024 Writeup | nem4ros</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/IBOH24/">
+<link rel="stylesheet" href="/book.min.15868584da87e33ecdbcb595aede30e64f269b0b73ce196cf3e4c4fb7beb0b17.css" integrity="sha256-FYaFhNqH4z7NvLWVrt4w5k8mmwtzzhls8&#43;TE&#43;3vrCxc=" crossorigin="anonymous">
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.aa65789c865e1158eaa3f1b19056fe0e9a6849c93369ddc18c92cbb319cd19e2.js" integrity="sha256-qmV4nIZeEVjqo/GxkFb&#43;DppoSckzad3BjJLLsxnNGeI=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>nem4ros</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>IBOH 2024 Writeup</h3>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#crypto-ill-kill-yall">Crypto: I&rsquo;ll Kill Yall</a></li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h1 id="introduction">
+  Introduction
+  <a class="anchor" href="#introduction">#</a>
+</h1>
+<figure><img src="/content/iboh24/iboh.jpeg">
+</figure>
+
+<p>The annual main event of CTF in Asia Pacific University (APU): International Battle of Hackers, hosted by <a href="https://www.linkedin.com/company/forensic-security-research-center-student-section-apu/posts/?feedView=all">FSEC-CC</a>, with amazing CTF players from not only Malaysia, but other countries such as Singapore and Indonesia participating.</p>
+<p>The challenges were difficult in my opinion, and most of them were removed after the event, therefore I did not manage to screenshot the solution for most of them.</p>
+<p>Therefore, here is my humble writeup for one of the crypto challenge: I&rsquo;ll Kill Yall. Enjoy.</p>
+<figure><img src="/content/honest.jpg"><figcaption>
+      <h4>It&#39;s honest work</h4>
+    </figcaption>
+</figure>
+
+<h1 id="crypto-ill-kill-yall">
+  Crypto: I&rsquo;ll Kill Yall
+  <a class="anchor" href="#crypto-ill-kill-yall">#</a>
+</h1>
+<p>The challenge provides an attachment of a hand-written message, looks like it&rsquo;s ciphered.</p>
+<figure><img src="/content/iboh24/s.png"><figcaption>
+      <h4>Creepy Message</h4>
+    </figcaption>
+</figure>
+
+<p>After searching in the web, the cipher is identified as the &lsquo;Zodiac Killer Cipher&rsquo;. One of the biggest mystery till this day.</p>
+<p>At first the cipher text was unreadable, however, the symbol with a circle and cross should be at the bottom, therefore the image is rotated 180 degrees.</p>
+<figure><img src="/content/iboh24/ori.png"><figcaption>
+      <h4>Found this online</h4>
+    </figcaption>
+</figure>
+
+<figure><img src="/content/iboh24/s2.png"><figcaption>
+      <h4>Readable now..</h4>
+    </figcaption>
+</figure>
+
+<p>To crack the cipher, head on to this <a href="https://www.dcode.fr/zodiac-killer-cipher">webpage</a> and enter the code manually.</p>
+<p>This is the returned message, which doesn&rsquo;t mean a thing.
+<figure><img src="/content/iboh24/fist_dec.png"><figcaption>
+      <h4>What does it mean?</h4>
+    </figcaption>
+</figure>
+</p>
+<p>To reveal the full ciphered message, increase the height byte value using Hexeditor, and the full message is revealed.
+<figure><img src="/content/iboh24/chgHex.png"><figcaption>
+      <h4>Increase height byte</h4>
+    </figcaption>
+</figure>
+
+<figure><img src="/content/iboh24/test.png"><figcaption>
+      <h4>Full encrypted message</h4>
+    </figcaption>
+</figure>
+</p>
+<p>Note that the original image cannot be rotated before changing the height byte, else the note will not reveal.</p>
+<figure><img src="/content/iboh24/totata.png"><figcaption>
+      <h4>Failed to reveal message</h4>
+    </figcaption>
+</figure>
+
+<p>Rotate the revealed cipher and redo the deciphering process , a plaintext message will show 😨.
+<figure><img src="/content/iboh24/flagstring.png"><figcaption>
+      <h4>Deciphered Message</h4>
+    </figcaption>
+</figure>
+</p>
+<p>The flag should start after &lsquo;THIS IS THE FLAG&rsquo;, which is &lsquo;KILLINGPEOPLEE?AFSTOPFED&rsquo;.
+But the flag was rejected when entered.</p>
+<p>After sanity checking with the challenge creator, turns out the question mark should be replaced by &lsquo;z&rsquo;, as there is a bug within the calculation of the deciphering process, causing the question mark to appear.</p>
+<figure><img src="/content/iboh24/message.png"><figcaption>
+      <h4>Sanity Check Message</h4>
+    </figcaption>
+</figure>
+
+<p>I was dumb enough to try the new flag &lsquo;KILLINGPEOPLEEZAFSTOPFED&rsquo;, which was rejected again btw.</p>
+<p>After reading the message a few times, it doesn&rsquo;t make sense to include everything after EZAF.</p>
+<p>FLAG: IBOH24{KILLINGPEOPLEEZAF}</p>
+<hr>
+<h1 id="conclusion">
+  Conclusion
+  <a class="anchor" href="#conclusion">#</a>
+</h1>
+<p>Our team have won 4th place for local category! 🥳</p>
+<p>Could not have done it without my teammates:
+<a href="https://www.linkedin.com/in/pua-zhen-da-31165b248/">ZD</a> &amp; <a href="https://www.linkedin.com/in/yvonne-chan-217862266/">Yvonne</a> 🥰🥰🥰
+<br />
+<br />
+Till next time! 😬
+<figure><img src="/content/uwma.gif">
+</figure>
+
+<br /></p>
+<hr>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#crypto-ill-kill-yall">Crypto: I&rsquo;ll Kill Yall</a></li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

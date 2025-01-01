@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Writeup for USC CTF">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/uscctf24/">
+  <meta property="og:site_name" content="nem4ros">
+  <meta property="og:title" content="USC CTF Writeup">
+  <meta property="og:description" content="Writeup for USC CTF">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:published_time" content="2024-11-03T07:32:05+08:00">
+    <meta property="article:modified_time" content="2024-11-03T07:32:05+08:00">
+    <meta property="article:tag" content="CTF">
+    <meta property="article:tag" content="Cybersecurity">
+    <meta property="article:tag" content="Writeup">
+<title>USC CTF Writeup | nem4ros</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/uscctf24/">
+<link rel="stylesheet" href="/book.min.15868584da87e33ecdbcb595aede30e64f269b0b73ce196cf3e4c4fb7beb0b17.css" integrity="sha256-FYaFhNqH4z7NvLWVrt4w5k8mmwtzzhls8&#43;TE&#43;3vrCxc=" crossorigin="anonymous">
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.aa65789c865e1158eaa3f1b19056fe0e9a6849c93369ddc18c92cbb319cd19e2.js" integrity="sha256-qmV4nIZeEVjqo/GxkFb&#43;DppoSckzad3BjJLLsxnNGeI=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>nem4ros</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>USC CTF Writeup</h3>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#concoction-rev">Concoction (rev)</a></li>
+    <li><a href="#tommys-artventures-web">Tommy&rsquo;s Artventures (Web)</a></li>
+    <li><a href="#buildings-osint">Buildings (OSINT)</a></li>
+    <li><a href="#redwoods-misc">RedWoods (misc)</a></li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h1 id="introduction">
+  Introduction
+  <a class="anchor" href="#introduction">#</a>
+</h1>
+<figure><img src="/content/uscctf24/logopic.png">
+</figure>
+
+<p>Over the weekend, I had participated in USC CTF hosted by University of Southern California.
+Here are some writeup of challenges I managed to solve.
+<figure><img src="/content/honest.jpg"><figcaption>
+      <h4>It&#39;s honest work</h4>
+    </figcaption>
+</figure>
+</p>
+<h1 id="concoction-rev">
+  Concoction (rev)
+  <a class="anchor" href="#concoction-rev">#</a>
+</h1>
+<p>Finally my first rev writeup! (it&rsquo;s a beginner&rsquo;s challenge 😅)<br>
+<br />
+An executable file is given, asking for some ingredients to craft a potion.</p>
+<p>To solve the challenge, use Ghidra to view the decompiled code. There are a lot of if-else conditions. However,to print the flag, variable bVar1 must be true.</p>
+<figure><img src="/content/uscctf24/con1.png"><figcaption>
+      <h4>Standard input and the corresponding variables</h4>
+    </figcaption>
+</figure>
+
+<figure><img src="/content/uscctf24/con2.png"><figcaption>
+      <h4>Condition to change bVar1 to true</h4>
+    </figcaption>
+</figure>
+
+<p>The conditions to get bVar1 == true is given, therefore, convert the hex values of each corresponding variable into decimal format and insert them when prompted.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>- local d0 (crypto crickets) = 7914
+</span></span><span style="display:flex;"><span>- local cc (forensic fungi) = 111100
+</span></span><span style="display:flex;"><span>- local c8 (osint oreos) = 2310
+</span></span><span style="display:flex;"><span>- local c4 (plants of pwn) = 51337
+</span></span><span style="display:flex;"><span>- local c0 (rev redcaps) = 42154142
+</span></span><span style="display:flex;"><span>- local bc (cobwebs) = 9111
+</span></span><span style="display:flex;"><span>- local b8 (ounces of water) = Any number greater than 1 will do  
+</span></span></code></pre></div><p>Variable b8 is not a condition, therefore, any value will do as long as it is greater than 0.<br>
+The string input prompt in the end must be &ldquo;decompiler&rdquo; as it is also one of the conditions.</p>
+<p>Solved!</p>
+<figure><img src="/content/uscctf24/con3.png"><figcaption>
+      <h4>Example of values input(ounces of water does not matter)</h4>
+    </figcaption>
+</figure>
+
+<p>FLAG: CYBORG{RECIPE=7914-111100-2310-51337-42154142-9111-decompiler}</p>
+<h1 id="tommys-artventures-web">
+  Tommy&rsquo;s Artventures (Web)
+  <a class="anchor" href="#tommys-artventures-web">#</a>
+</h1>
+<figure><img src="/content/uscctf24/tom1.png">
+</figure>
+
+<p>An URL is given, which redirects to an AI art page. In order to login to the page, create an temporary account.
+<figure><img src="/content/uscctf24/tom2.png"><figcaption>
+      <h4>Login Page</h4>
+    </figcaption>
+</figure>
+</p>
+<p>During the navigation to &ldquo;curate&rdquo; page, a messaged shown indicating the login user must be admin.
+<figure><img src="/content/uscctf24/tom3.png"><figcaption>
+      <h4>Message in Curate page</h4>
+    </figcaption>
+</figure>
+</p>
+<p>Based on the secret key attached in the challenge, it is clear that reforging of the session cookie is required. Firstly, copy the cookie from &ldquo;Inspect &gt; Application and decode the cookie to check the format. (There is another way using Burpsuite, but I am not sure how 😅)</p>
+<figure><img src="/content/uscctf24/tom4.png"><figcaption>
+      <h4>Find the cookie in &#34;Inspect&#34;</h4>
+    </figcaption>
+</figure>
+
+<p>To create a new cookie, I used this <a href="https://book.hacktricks.xyz/network-services-pentesting/pentesting-web/flask">website</a> as a reference, and the CLI command is attached below. (Remember to install the tool first)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>pip3 install flask-unsign
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>flask-unsign --sign --cookie &#34;{&#39;user&#39;: &#39;admin&#39;}&#34; --secret &#39;THE-SECRET-KEY&#39;
+</span></span></code></pre></div><p>After changing the forged cookie, the session is currently logged in as admin, and the flag is found in the &lsquo;curate&rsquo; page.</p>
+<figure><img src="/content/uscctf24/tom5.png"><figcaption>
+      <h4>Decode and sign cookie using flask-unsign tool</h4>
+    </figcaption>
+</figure>
+
+<figure><img src="/content/uscctf24/tom6.png"><figcaption>
+      <h4>Successfully logged in as admin</h4>
+    </figcaption>
+</figure>
+
+<figure><img src="/content/uscctf24/tom7.png"><figcaption>
+      <h4>Flag is shown in &#34;Curate&#34; page.</h4>
+    </figcaption>
+</figure>
+
+<p>FLAG: CYBORG{oce4n5_auth3N71ca7i0N}</p>
+<h1 id="buildings-osint">
+  Buildings (OSINT)
+  <a class="anchor" href="#buildings-osint">#</a>
+</h1>
+<p>A pdf file was attached with contents of buildings, and I assumed that these buildings are in USC.</p>
+<p>The flag format is CRYPTO, therefore no investigation is needed for the first 6 pictures (pictures before the curly braces).</p>
+<p>These are the names of the buildings for the flags, index them accordingly using their acronyms, and the flag is found!
+<figure><img src="/content/uscctf24/building1.png"><figcaption>
+      <h4>BRI</h4>
+    </figcaption>
+</figure>
+
+<figure><img src="/content/uscctf24/building2.png"><figcaption>
+      <h4>CKS</h4>
+    </figcaption>
+</figure>
+</p>
+<p>FLAG: CRYPTO{BRICKS}</p>
+<h1 id="redwoods-misc">
+  RedWoods (misc)
+  <a class="anchor" href="#redwoods-misc">#</a>
+</h1>
+<figure><img src="/content/uscctf24/red1.png">
+</figure>
+
+<p>A .jar file is attached.</p>
+<p>Use WinRAR to unzip the jar file. There are 3 files inside.</p>
+<p>To open the class file, use an <a href="http://www.javadecompilers.com/">online Java decompiler</a> to decompile and view the Main.class file.</p>
+<figure><img src="/content/uscctf24/red2.png"><figcaption>
+      <h4>Decompiled code</h4>
+    </figcaption>
+</figure>
+
+<p>After going through the code, the code does nothing much by just printing out the message in the flags array. Therefore, the flag is assumed to be in this array.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">static</span> String<span style="color:#f92672">[]</span> flags <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> String<span style="color:#f92672">[]</span>{<span style="color:#e6db74">&#34;ccccccccccagccccccchdbgdddehcccccagcccchdbgccehcccccagddddhdbgdddehgcccccccccccccecccedddddddd&#34;</span>, <span style="color:#e6db74">&#34;dddeagcgchhdbcccccagcccccccccchdbgccegcedddeddddeccccccccccccccccceddddddddddddddehhccccccaggccccchhdbggdddeddddddddddde&#34;</span>, <span style="color:#e6db74">&#34;ddehhccccccaggdddddhhdbggdeehhcccccccccccaggcccchhdbggehhcccccaggdddddhhdbggeagcgchhdbabccccccaggdddhhdbggehcccccceehhcce&#34;</span>};
+</span></span></code></pre></div><p>Combine all three array elements together to form a long string. However, the string does not mean anything after analyzing with Cipher Identifier.</p>
+<p>Next, use AperiSolve to analyze the image. There is a hidden message. By looking at the symbols, it is easily identified as the Brainfuck cipher.
+<figure><img src="/content/uscctf24/red3.png"><figcaption>
+      <h4>Hidden message (Is it the reason of the naming for the challenge?)🤔</h4>
+    </figcaption>
+</figure>
+</p>
+<p>Use any word editor to replace the alphabets with the symbol given, and decrypt the new ciphertext. The flag is found!</p>
+<p>Brainfuck message as below:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>++++++++++[&gt;+++++++&lt;-]&gt;---.&lt;+++++[&gt;++++&lt;-]&gt;++.&lt;+++++[&gt;----&lt;-]&gt;---.&lt;&gt;+++++++++++++.+++.-----------.[&gt;+&gt;+&lt;&lt;-]+++++[&gt;++++++++++&lt;-]&gt;++.&gt;+.---.----.+++++++++++++++++.--------------.&lt;&lt;++++++[&gt;&gt;+++++&lt;&lt;-]&gt;&gt;---.-----------.--.&lt;&lt;++++++[&gt;&gt;-----&lt;&lt;-]&gt;&gt;-..&lt;&lt;+++++++++++[&gt;&gt;++++&lt;&lt;-]&gt;&gt;.&lt;&lt;+++++[&gt;&gt;-----&lt;&lt;-]&gt;&gt;.[&gt;+&gt;+&lt;&lt;-][]++++++[&gt;&gt;---&lt;&lt;-]&gt;&gt;.&lt;++++++..&lt;&lt;++.
+</span></span></code></pre></div><figure><img src="/content/uscctf24/red4.png"><figcaption>
+      <h4>Decrypted Message</h4>
+    </figcaption>
+</figure>
+
+<p>FLAG: CYBORG{HEARD_TR33_F4LL}</p>
+<br />
+<h1 id="conclusion">
+  Conclusion
+  <a class="anchor" href="#conclusion">#</a>
+</h1>
+<p>Overall, the CTF contains various challenges suitable for players from different levels. Some challenges were really out of my knowledge.  I will try to understand them and do better next time. (I got rank 79th btw)
+<br />
+Anyway&hellip;</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<figure><img src="/content/uwma.gif">
+</figure>
+
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#concoction-rev">Concoction (rev)</a></li>
+    <li><a href="#tommys-artventures-web">Tommy&rsquo;s Artventures (Web)</a></li>
+    <li><a href="#buildings-osint">Buildings (OSINT)</a></li>
+    <li><a href="#redwoods-misc">RedWoods (misc)</a></li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
