@@ -6,7 +6,7 @@
 <meta name="description" content="Writeup for APU IBOH event!">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
-<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/content/IBOH24/">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/content/iboh24/">
   <meta property="og:site_name" content="nem4ros">
   <meta property="og:title" content="IBOH 2024 Writeup">
   <meta property="og:description" content="Writeup for APU IBOH event!">
@@ -21,10 +21,10 @@
 <title>IBOH 2024 Writeup | nem4ros</title>
 <link rel="icon" href="/content/Enchanted_Book.gif">
 <link rel="manifest" href="/manifest.json">
-<link rel="canonical" href="http://localhost:1313/content/IBOH24/">
+<link rel="canonical" href="http://localhost:1313/content/iboh24/">
 <link rel="stylesheet" href="/book.min.dcb0a268a38ba47e37bad4c27b5f27872022ebf3be5bda244676bd2cf5d580ad.css" integrity="sha256-3LCiaKOLpH43utTCe18nhyAi6/O&#43;W9okRna9LPXVgK0=" crossorigin="anonymous">
   <script defer src="/fuse.min.js"></script>
-  <script defer src="/en.search.min.f3c47885ed0cbb97b0518da1072e1c2f0a3e26cff8ec867d51fa0714e8eaf04e.js" integrity="sha256-88R4he0Mu5ewUY2hBy4cLwo&#43;Js/47IZ9UfoHFOjq8E4=" crossorigin="anonymous"></script>
+  <script defer src="/en.search.min.82ea26b0cb4b4d8c844013ce4f8fd2e6c5ff2fa1953d1f0b0bfe47d6ab9bb1f1.js" integrity="sha256-guomsMtLTYyEQBPOT4/S5sX/L6GVPR8LC/5H1qubsfE=" crossorigin="anonymous"></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -102,7 +102,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/content/IBOH24/" class="active">IBOH 2024 Writeup</a>
+    <a href="/content/iboh24/" class="active">IBOH 2024 Writeup</a>
   
 
         </li>
@@ -115,7 +115,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/content/FSIIECCTF24/" class=""> FSIIEC CTF Writeup</a>
+    <a href="/content/fsiiecctf24/" class=""> FSIIEC CTF Writeup</a>
   
 
         </li>
@@ -128,7 +128,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/content/DUCTF24/" class="">DownUnderCTF24 Writeup</a>
+    <a href="/content/ductf24/" class="">DownUnderCTF24 Writeup</a>
   
 
         </li>
@@ -141,7 +141,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/content/UIUCTF24/" class="">UIUCTF 2024 Writeup</a>
+    <a href="/content/uiuctf24/" class="">UIUCTF 2024 Writeup</a>
   
 
         </li>
@@ -243,7 +243,7 @@ https://github.com/alex-shpak/hugo-book
   Introduction
   <a class="anchor" href="#introduction">#</a>
 </h1>
-<figure><img src="/content/IBOH24/content/iboh24/iboh.jpeg">
+<figure><img src="/content/iboh24/iboh.jpeg">
 </figure>
 
 <p>The annual main event of CTF in Asia Pacific University (APU): International Battle of Hackers, hosted by <a href="https://www.linkedin.com/company/forensic-security-research-center-student-section-apu/posts/?feedView=all">FSEC-CC</a>, with amazing CTF players from not only Malaysia, but other countries such as Singapore and Indonesia participating.</p>
@@ -259,49 +259,49 @@ https://github.com/alex-shpak/hugo-book
   <a class="anchor" href="#crypto-ill-kill-yall">#</a>
 </h1>
 <p>The challenge provides an attachment of a hand-written message, looks like it&rsquo;s ciphered.</p>
-<figure><img src="/content/IBOH24/content/iboh24/s.png"><figcaption>
+<figure><img src="/content/iboh24/s.png"><figcaption>
       <h4>Creepy Message</h4>
     </figcaption>
 </figure>
 
 <p>After searching in the web, the cipher is identified as the &lsquo;Zodiac Killer Cipher&rsquo;. One of the biggest mystery till this day.</p>
 <p>At first the cipher text was unreadable, however, the symbol with a circle and cross should be at the bottom, therefore the image is rotated 180 degrees.</p>
-<figure><img src="/content/IBOH24/content/iboh24/ori.png"><figcaption>
+<figure><img src="/content/iboh24/ori.png"><figcaption>
       <h4>Found this online</h4>
     </figcaption>
 </figure>
 
-<figure><img src="/content/IBOH24/content/iboh24/s2.png"><figcaption>
+<figure><img src="/content/iboh24/s2.png"><figcaption>
       <h4>Readable now..</h4>
     </figcaption>
 </figure>
 
 <p>To crack the cipher, head on to this <a href="https://www.dcode.fr/zodiac-killer-cipher">webpage</a> and enter the code manually.</p>
 <p>This is the returned message, which doesn&rsquo;t mean a thing.
-<figure><img src="/content/IBOH24/content/iboh24/fist_dec.png"><figcaption>
+<figure><img src="/content/iboh24/fist_dec.png"><figcaption>
       <h4>What does it mean?</h4>
     </figcaption>
 </figure>
 </p>
 <p>To reveal the full ciphered message, increase the height byte value using Hexeditor, and the full message is revealed.
-<figure><img src="/content/IBOH24/content/iboh24/chgHex.png"><figcaption>
+<figure><img src="/content/iboh24/chgHex.png"><figcaption>
       <h4>Increase height byte</h4>
     </figcaption>
 </figure>
 
-<figure><img src="/content/IBOH24/content/iboh24/test.png"><figcaption>
+<figure><img src="/content/iboh24/test.png"><figcaption>
       <h4>Full encrypted message</h4>
     </figcaption>
 </figure>
 </p>
 <p>Note that the original image cannot be rotated before changing the height byte, else the note will not reveal.</p>
-<figure><img src="/content/IBOH24/content/iboh24/totata.png"><figcaption>
+<figure><img src="/content/iboh24/totata.png"><figcaption>
       <h4>Failed to reveal message</h4>
     </figcaption>
 </figure>
 
 <p>Rotate the revealed cipher and redo the deciphering process , a plaintext message will show 😨.
-<figure><img src="/content/IBOH24/content/iboh24/flagstring.png"><figcaption>
+<figure><img src="/content/iboh24/flagstring.png"><figcaption>
       <h4>Deciphered Message</h4>
     </figcaption>
 </figure>
@@ -309,7 +309,7 @@ https://github.com/alex-shpak/hugo-book
 <p>The flag should start after &lsquo;THIS IS THE FLAG&rsquo;, which is &lsquo;KILLINGPEOPLEE?AFSTOPFED&rsquo;.
 But the flag was rejected when entered.</p>
 <p>After sanity checking with the challenge creator, turns out the question mark should be replaced by &lsquo;z&rsquo;, as there is a bug within the calculation of the deciphering process, causing the question mark to appear.</p>
-<figure><img src="/content/IBOH24/content/iboh24/message.png"><figcaption>
+<figure><img src="/content/iboh24/message.png"><figcaption>
       <h4>Sanity Check Message</h4>
     </figcaption>
 </figure>
