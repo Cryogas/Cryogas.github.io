@@ -2,45 +2,45 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://cryogas.github.io/tags/CTF/</loc>
+    <loc>http://localhost:1313/tags/CTF/</loc>
     <lastmod>2024-12-29T09:16:50+08:00</lastmod>
   </url><url>
-    <loc>https://cryogas.github.io/tags/Cybersecurity/</loc>
+    <loc>http://localhost:1313/tags/Cybersecurity/</loc>
     <lastmod>2024-12-29T09:16:50+08:00</lastmod>
   </url><url>
-    <loc>https://cryogas.github.io/tags/</loc>
+    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2024-12-29T09:16:50+08:00</lastmod>
   </url><url>
-    <loc>https://cryogas.github.io/content/wgmy24/</loc>
+    <loc>http://localhost:1313/content/wgmy24/</loc>
     <lastmod>2024-12-29T09:16:50+08:00</lastmod>
   </url><url>
-    <loc>https://cryogas.github.io/tags/Writeup/</loc>
+    <loc>http://localhost:1313/tags/Writeup/</loc>
     <lastmod>2024-12-29T09:16:50+08:00</lastmod>
   </url><url>
-    <loc>https://cryogas.github.io/content/uscctf24/</loc>
+    <loc>http://localhost:1313/content/uscctf24/</loc>
     <lastmod>2024-11-03T07:32:05+08:00</lastmod>
   </url><url>
-    <loc>https://cryogas.github.io/content/IBOH24/</loc>
+    <loc>http://localhost:1313/content/IBOH24/</loc>
     <lastmod>2024-09-29T15:10:12+08:00</lastmod>
   </url><url>
-    <loc>https://cryogas.github.io/content/FSIIECCTF24/</loc>
+    <loc>http://localhost:1313/content/FSIIECCTF24/</loc>
     <lastmod>2024-09-08T21:50:02+08:00</lastmod>
   </url><url>
-    <loc>https://cryogas.github.io/content/DUCTF24/</loc>
+    <loc>http://localhost:1313/content/DUCTF24/</loc>
     <lastmod>2024-07-07T09:13:25+08:00</lastmod>
   </url><url>
-    <loc>https://cryogas.github.io/content/UIUCTF24/</loc>
+    <loc>http://localhost:1313/content/UIUCTF24/</loc>
     <lastmod>2024-07-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://cryogas.github.io/content/wani-ctf/</loc>
+    <loc>http://localhost:1313/content/wani-ctf/</loc>
     <lastmod>2024-06-28T11:28:33+08:00</lastmod>
   </url><url>
-    <loc>https://cryogas.github.io/content/vsctf/</loc>
+    <loc>http://localhost:1313/content/vsctf/</loc>
     <lastmod>2024-06-28T11:28:33+08:00</lastmod>
   </url><url>
-    <loc>https://cryogas.github.io/content/</loc>
+    <loc>http://localhost:1313/content/</loc>
     <lastmod>2024-06-28T11:28:33+08:00</lastmod>
   </url><url>
-    <loc>https://cryogas.github.io/categories/</loc>
+    <loc>http://localhost:1313/categories/</loc>
   </url>
 </urlset>
